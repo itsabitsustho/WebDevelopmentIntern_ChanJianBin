@@ -1,0 +1,242 @@
+<html>
+    <head>
+    <meta charset="UTC-8">
+    <meta name="description" content="Kicoco Mobile Phone Station">
+    <title>Galazy Z Flip4</title>
+
+    <!-- Favicon Section (Used to display logo on top of the browser)-->
+    <link rel="icon" href="../pictures/logo/kicoco.png">
+
+    <!-- Stylesheet (Link your stylesheet here in every html yaaaaa)-->
+    <link rel="stylesheet" href="../css/style.css" type="text/css">
+    <link rel="stylesheet" href="../css/base.css" type="text/css">
+    <link rel="stylesheet" href="../css/samsungphone.css" type="text/css">
+    <link rel="stylesheet" href="../css/relatedproduct.css" type="text/css">
+    </head>
+
+    <body>
+            <!--Header-->
+           <header id="topheader">
+            <nav class="topnav">
+                <div class="logo-container">
+                    <a href="index.html"><img class="logo" src="../pictures/logo/kicoco.png"></a>
+                    <input id="search-bar" type="text" placeholder="Search items">
+                </div>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">Our Product</a>
+                        <ul>
+                            <li><a href="apple.html">Mobile</a></li>
+                            <li><a href="laptop.html">Laptop</a></li>
+                            <li><a href="tablet.html">Tablet</a></li>
+                            <li><a href="smartwearable.html">Smart Wearable</a></li>
+                            <li><a href="others.html">Other</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="https://www.gamarena.com/" target="blank">What's New</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+           </header>
+
+        <!-- Scrolling Pannel Section-->
+        <div class="background3">
+            <div class="intro">
+                <h1><span>Galaxy Z Flip4</span></h1>
+                <p class="paragraph"><span>GALAXY NOTED WITH FULL POWER</span></p>
+            </div>
+        </div>
+        <div class="container-1">
+         <div class="product-img">
+            <div class="box">
+            <img class="img-ip14-1" src="../pictures/iphone14/samsungflip.png" id="MainImg" style="width: 95%;">
+            </div>
+            <div class="small-img-group">
+                <div class="small-img-col">
+                    <img src="../pictures/iphone14/samsungzflip4black.png" width="80%" class="small-img" alt="">
+                </div>
+                <div class="small-img-col">
+                    <img src="../pictures/iphone14/samsungzflip4blue.png" width="80%" class="small-img" alt="">
+                </div>
+                <div class="small-img-col">
+                    <img src="../pictures/iphone14/samsungzflip4pink.png" width="80%" class="small-img" alt="">
+                </div>
+                <div class="small-img-col">
+                    <img src="../pictures/iphone14/samsungzflip4purple.png" width="80%" class="small-img" alt="">
+                </div>
+            </div>
+            <div class="small-img-group1">
+                <div class="small-img-col1">
+                    <img src="../pictures/iphone14/samsungzflip4black.png" width="80%" class="small-img1" alt="">
+                </div>
+                <div class="small-img-col1">
+                    <img src="../pictures/iphone14/samsungflip4blue.png" width="80%" class="small-img1" alt="">
+                </div>
+                <div class="small-img-col1">
+                    <img src="../pictures/iphone14/samsungzflip4pink.png" width="80%" class="small-img1" alt="">
+                </div>
+                <div class="small-img-col1">
+                    <img src="../pictures/iphone14/samsungzflip4purple.png" width="80%" class="small-img1" alt="">
+                </div>
+            </div>
+            <script>
+                var MainImg = document.getElementById('MainImg');
+                var smallImg = document.getElementsByClassName('small-img');
+                var smallImg1 = document.getElementsByClassName('small-img1');
+
+                smallImg[0].onclick = function(){
+                MainImg.src = smallImg1[0].src;
+                }
+                smallImg[1].onclick = function(){
+                MainImg.src = smallImg1[1].src;
+                }
+                smallImg[2].onclick = function(){
+                MainImg.src = smallImg1[2].src;
+                }
+                smallImg[3].onclick = function(){
+                MainImg.src = smallImg1[3].src;
+                }
+                
+            </script>
+
+            <p class="total-price">
+                <br>
+                <span>From</span>
+                <span id="price">RM4099-RM4899</span></p>
+
+        <div class="quantity">
+            <button class="brn minus-btn disbaled" type="button">-</button>
+            <input type="text" id="quantity" value="1">
+            <button class="btn plus-btn" type="button">+</button>
+        </div>
+        <br>
+        <div class="box-1">
+         <div class="btn btn-one" onclick="cart()" >
+              <span>ADD TO CART</span>
+            </div></a> 
+            </div>
+        </div>
+        <div class="description1">
+            <p id=spec><b>Size(Main Display)</b></p>
+                <p>170.3mm</p>
+                <p>6.7"full rectangle</p>
+                <p>166.4mm</p>
+                <p>6.6"rounded corners</p>
+                <p>Weight = 187g</p>
+            <br>
+            <p id=spec><b>Capacity</b></p>
+                <p>128GB<sup>2</sup></p>
+                <p>256GB<sup>2</sup></p>
+                <p>512GB<sup>2</sup></p>
+            <br>
+            <p id=spec><b>Video Recording Resolation</b></p>
+                <p>UHD 8K(3840x2160)@24fps</p>
+        </div>
+        <div class="description2">
+            <p id=spec><b>Battery<sup>8</sup></b></p>
+                <p>3700</p>
+            <br>
+            <p id=spec><b>CPU Speed and Type</b></p>
+                <p>3.18GHz,2.7GHz,2GHz</p>
+                <p>Octa-Core</p>
+            <br>
+            <p id=spec><b>Rear Camera - Resolation(Multiple)</b></p>
+                <p>12.0MP + 12.0MP</p>
+            <p id=spec><b>Rear Camera - F Number(Multiple)</b></p>
+                <p>F1.8,F2.2</p>
+                <br>
+            <p id=spec><b>Dimension(HxWxD,mm)</b></p>
+                <p>165.3x71.9x6.9</p>
+                <br>
+        </div>
+
+    </div>
+</div>
+</section>
+
+<section class="product">
+   
+    <p class="rel"><b>Related Product...</b></p>
+    <div class="container-2">
+        
+
+        <div class="card-1">
+            <a href="samsungs22.html">
+            <img src="../pictures/iphone14/samsungs22green.png">
+            <p class="logo1_1">SAMSUNG</p>
+            <p class="heh">Galaxy S22</p>
+            <p class="price" style="color: purple;">From RM3499</p>
+            </a>
+        </div>
+        
+        
+        <div class="card-1">
+            <a href="samsungfold4.html">
+            <img src="../pictures/iphone14/samsungzfold4yellow.png">
+            <p class="logo1_1">SAMSUNG</p>
+            <p class="heh">Galaxy Z Fold4</p>
+            <p class="price" style="color: purple;">From RM6799</p>
+            </a>
+        </div>
+
+        <div class="card-1">
+            <a href="samsungultra.html">
+            <img src="../pictures/iphone14/samsungs22ultrapurple.png">
+            <p class="logo1_1">SAMSUNG</p>
+            <p class="heh">Galaxy S22 Ultra</p>
+            <p class="price" style="color: purple;">From RM5499</p>
+            </a>
+        </div>
+        </div>
+</section>
+</section>
+<br>
+<br>
+        <br><br><br>
+        <!--Footer Section-->
+        <footer>
+            <div class="foottop">
+                <div class="footer-1">
+                    <img class="fotlogo" src="../pictures/logo/kicoco.png">
+                </div>
+                <div class="footer-2">
+                    <h4>Whatsapp Us At</h4></br>
+                    <h5>+6012 5435269</h5></br>
+                    <h5>Monday to Sunday</h5></br>
+                    <h5>10am - 10pm</h5></br>
+                </div>
+                <div class="footer-3">
+                    <h4>INFORMATION</h4>
+                    <a href="aboutus.html">About Us</a>
+                    <a href="contact.html">Contact Us</a>
+                    <a href="https://www.maybank2u.com.my/maybank2u/malaysia/en/personal/promotions/maybank_cards/promo_my_epp0721.page?s" target="_blank">Installment Information</a>
+                </div>
+                <div class="footer-4">
+                    <h4>USEFULL LINKS</h4>
+                    <a href="http://apple.com/my" target="_blank">Apple Malaysia</a>
+                    <a href="https://www.samsung.com/my/" target="_blank">Samsung Malaysia</a>
+                    <a href="https://www.oppo.com/my/" target="_blank">Oppo Malaysia</a>
+                </div>
+                <div class="footer-5">
+                    <h4>WE ACCEPT</h4>
+                    <img class="paymentpic" src="../pictures/payment/cc-visa.svg">
+                    <img class="paymentpic" src="../pictures/payment/cc-mastercard.svg">
+                    <img class="paymentpic" src="../pictures/payment/cc-amex.svg">
+                    <img class="paymentpic" src="../pictures/payment/cc-jcb.svg">
+                    <img class="paymentpic" src="../pictures/payment/alipay.svg">
+                    <img class="paymentpic" src="../pictures/payment/apple-pay.svg">
+                </div>
+                <div class="footer-6">
+                    <h4>Follow Us on</h4>
+                    <a href="https://www.instagram.com/kimbenw/" target="_blank"><img class="paymentpic" src="../pictures/social/instagram.svg"></a>
+                    <a href="https://www.facebook.com/KimBen" target="_blank"><img class="paymentpic" src="../pictures/social/facebook-f.svg"></a>
+                    <a href="https://bit.ly/edu-learning-Ben" target="_blank"><img class="paymentpic" src="../pictures/social/whatsapp.svg"></a>
+                    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank"><img class="paymentpic" src="../pictures/social/youtube.svg"></a>
+                </div>
+            </div>
+            <p class="copyright">Copyright &copy; <script>document.write(new Date().getFullYear());</script> All Rights Reserved | Kicoco Mobile Phone Station</p>
+        </footer>
+        <script src="../java/header.js"></script>
+        </body>
+        </html>

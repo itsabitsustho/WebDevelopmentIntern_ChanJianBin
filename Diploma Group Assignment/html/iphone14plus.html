@@ -1,0 +1,266 @@
+<html>
+
+<head>
+    <meta charset="UTC-8">
+    <meta name="description" content="Kicoco Mobile Phone Station">
+    <title>iPhone 14 Plus</title>
+
+    <!-- Favicon Section (Used to display logo on top of the browser)-->
+    <link rel="icon" href="../pictures/logo/kicoco.png">
+
+    <!-- Stylesheet (Link your stylesheet here in every html yaaaaa)-->
+    <link rel="stylesheet" href="../css/style.css" type="text/css">
+    <link rel="stylesheet" href="../css/base.css" type="text/css">
+    <link rel="stylesheet" href="../css/ip14phone.css" type="text/css">
+    <link rel="stylesheet" href="../css/relatedproduct.css" type="text/css">
+</head>
+
+<body>
+    <!--Header-->
+    <header id="topheader">
+        <nav class="topnav">
+            <div class="logo-container">
+                <a href="index.html"><img class="logo" src="../pictures/logo/kicoco.png"></a>
+                <input id="search-bar" type="text" placeholder="Search items">
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Our Product</a>
+                    <ul>
+                        <li><a href="apple.html">Mobile</a></li>
+                        <li><a href="laptop.html">Laptop</a></li>
+                        <li><a href="tablet.html">Tablet</a></li>
+                        <li><a href="smartwearable.html">Smart Wearable</a></li>
+                        <li><a href="others.html">Other</a></li>
+                    </ul>
+                </li>
+                <li><a href="https://www.gsmarena.com/" target="_blank">What's New</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Scrolling Pannel Section-->
+    <div class="background">
+        <div class="intro">
+            <h1><span>iPHONE 14 Plus</span></h1>
+            <p class="paragraph"><span>THE BEST IPHONE EVER INVENTED</span></p>
+        </div>
+    </div>
+    <div class="container-1">
+        <div class="product-img">
+            <div class="box">
+                <img class="img-ip14-1"
+                    src="../pictures/iphone14/iphone-14-finish-unselect-gallery-1-202209_GEO_US_FMT_WHH-removebg-preview.png"
+                    id="MainImg" style="width: 95%;">
+            </div>
+            <div class="small-img-group">
+                <div class="small-img-col">
+                    <img src="../pictures/iphone14/Button14Black.png" width="80%" class="small-img" alt="">
+                </div>
+                <div class="small-img-col">
+                    <img src="../pictures/iphone14/Button14Blue.png" width="80%" class="small-img" alt="">
+                </div>
+                <div class="small-img-col">
+                    <img src="../pictures/iphone14/Button14Purple.png" width="80%" class="small-img" alt="">
+                </div>
+                <div class="small-img-col">
+                    <img src="../pictures/iphone14/Button14Red.png" width="80%" class="small-img" alt="">
+                </div>
+                <div class="small-img-col">
+                    <img src="../pictures/iphone14/Button14Starlight-removebg-preview.png" width="80%" class="small-img"
+                        alt="">
+                </div>
+            </div>
+            <div class="small-img-group1">
+                <div class="small-img-col1">
+                    <img src="../pictures/iphone14/Ip14Black.png" width="80%" class="small-img1" alt="">
+                </div>
+                <div class="small-img-col1">
+                    <img src="../pictures/iphone14/Ip14Blue-removebg-preview.png" width="80%" class="small-img1" alt="">
+                </div>
+                <div class="small-img-col1">
+                    <img src="../pictures/iphone14/Ip14Purple-removebg-preview.png" width="80%" class="small-img1"
+                        alt="">
+                </div>
+                <div class="small-img-col1">
+                    <img src="../pictures/iphone14/Ip14Red-removebg-preview.png" width="80%" class="small-img1" alt="">
+                </div>
+                <div class="small-img-col1">
+                    <img src="../pictures/iphone14/Ip14plusStarlight-remove.png" width="80%" class="small-img1" alt="">
+                </div>
+            </div>
+            <script>
+                var MainImg = document.getElementById('MainImg');
+                var smallImg = document.getElementsByClassName('small-img');
+                var smallImg1 = document.getElementsByClassName('small-img1');
+
+                smallImg[0].onclick = function () {
+                    MainImg.src = smallImg1[0].src;
+                }
+                smallImg[1].onclick = function () {
+                    MainImg.src = smallImg1[1].src;
+                }
+                smallImg[2].onclick = function () {
+                    MainImg.src = smallImg1[2].src;
+                }
+                smallImg[3].onclick = function () {
+                    MainImg.src = smallImg1[3].src;
+                }
+                smallImg[4].onclick = function () {
+                    MainImg.src = smallImg1[4].src;
+                }
+
+            </script>
+
+            <p class="total-price">
+                <br>
+                <span>From</span>
+                <span id="price">RM4699 to RM6199</span>
+            </p>
+
+            <div class="quantity">
+                <button class="brn minus-btn disbaled" type="button">-</button>
+                <input type="text" id="quantity" value="1">
+                <button class="btn plus-btn" type="button">+</button>
+            </div>
+            <br>
+            <div class="box-1">
+                <div class="btn btn-one" onclick="cart()">
+                    <span>ADD TO CART</span>
+                </div></a>
+            </div>
+        </div>
+        <div class="description1">
+            <p id=spec><b>Size and Weight<sup>2</sup></b></p>
+            <p>Height: 160.8mm</p>
+            <p>Width: 78.1mm</p>
+            <p>Depth: 7.80mm</p>
+            <p>Weight: 203g</p>
+            <br>
+            <p id=spec><b>Capacity</b></p>
+            <p>128GB<sup>2</sup></p>
+            <p>256GB<sup>2</sup></p>
+            <p>512GB<sup>2</sup></p>
+            <br>
+            <p id=spec><b>Display</b></p>
+            <p>Super Retina XDR display</p>
+            <p>6.7‑inch (diagonal) all‑screen OLED display</p>
+            <p>2778x1284-pixel resolution at 458 ppi</p>
+            <p style="font-size: small">The iPhone 14 Plus display has rounded corners that follow a beautiful curved
+                design, and these corners are within a standard rectangle. When measured as a standard rectangular
+                shape, the screen is 6.68 inches diagonally (actual viewable area is less).</p>
+        </div>
+        <div class="description2">
+            <p id=spec><b>Power and Battery<sup>8</sup></b></p>
+            <p>Video playback : Up to 26 hours </p>
+            <p>Video playback (streamed) : Up to 20 hours </p>
+            <p>Audio playback : Up to 100 hours </p>
+            <br>
+            <p id=spec><b>In The Box</b></p>
+            <p>iPhone with IOS 16</p>
+            <p>USB-C to Lightning Cable</p>
+            <p>Documentation</p>
+            <img src="../pictures/iphone14/Screenshot (18).png" width="500" height="300">
+            <br>
+        </div>
+
+    </div>
+    </div>
+    </section>
+
+    <section class="product">
+
+        <p class="rel"><b>Related Product...</b></p>
+        <div class="container-2">
+
+
+            <div class="card-1">
+                <a href="iphone14.html">
+                    <img src="../pictures/iphone14/Ip14plus-removebg-preview.png">
+                    <p class="logo1_1">APPLE</p>
+                    <p class="heh">iPhone 14</p>
+                    <p class="price" style="color: purple;">From RM4199</p>
+                </a>
+            </div>
+
+
+            <div class="card-1">
+                <a href="iphone14pro.html">
+                    <img src="../pictures/iphone14/Ip14pro-removebg-preview.png">
+                    <p class="logo1_1">APPLE</p>
+                    <p class="heh">iPhone 14 Pro</p>
+                    <p class="price" style="color: purple;">From RM5299</p>
+                </a>
+            </div>
+
+            <div class="card-1">
+                <a href="iphone14promax.html">
+                    <img src="../pictures/iphone14/Ip14promax-removebg-preview.png">
+                    <p class="logo1_1">APPLE</p>
+                    <p class="heh">iPhone 14 Pro Max</p>
+                    <p class="price" style="color: purple;">From RM5799</p>
+                </a>
+            </div>
+
+        </div>
+    </section>
+    </section>
+    <br>
+    <br>
+    <br><br><br>
+    <!--Footer Section-->
+    <footer>
+        <div class="foottop">
+            <div class="footer-1">
+                <img class="fotlogo" src="../pictures/logo/kicoco.png">
+            </div>
+            <div class="footer-2">
+                <h4>Whatsapp Us At</h4></br>
+                <h5>+6012 5435269</h5></br>
+                <h5>Monday to Sunday</h5></br>
+                <h5>10am - 10pm</h5></br>
+            </div>
+            <div class="footer-3">
+                <h4>INFORMATION</h4>
+                <a href="aboutus.html">About Us</a>
+                <a href="contact.html">Contact Us</a>
+                <a href="https://www.maybank2u.com.my/maybank2u/malaysia/en/personal/promotions/maybank_cards/promo_my_epp0721.page?s"
+                    target="_blank">Installment Information</a>
+            </div>
+            <div class="footer-4">
+                <h4>USEFULL LINKS</h4>
+                <a href="http://apple.com/my" target="_blank">Apple Malaysia</a>
+                <a href="https://www.samsung.com/my/" target="_blank">Samsung Malaysia</a>
+                <a href="https://www.oppo.com/my/" target="_blank">Oppo Malaysia</a>
+            </div>
+            <div class="footer-5">
+                <h4>WE ACCEPT</h4>
+                <img class="paymentpic" src="../pictures/payment/cc-visa.svg">
+                <img class="paymentpic" src="../pictures/payment/cc-mastercard.svg">
+                <img class="paymentpic" src="../pictures/payment/cc-amex.svg">
+                <img class="paymentpic" src="../pictures/payment/cc-jcb.svg">
+                <img class="paymentpic" src="../pictures/payment/alipay.svg">
+                <img class="paymentpic" src="../pictures/payment/apple-pay.svg">
+            </div>
+            <div class="footer-6">
+                <h4>Follow Us on</h4>
+                <a href="https://www.instagram.com/kimbenw/" target="_blank"><img class="paymentpic"
+                        src="../pictures/social/instagram.svg"></a>
+                <a href="https://www.facebook.com/KimBen" target="_blank"><img class="paymentpic"
+                        src="../pictures/social/facebook-f.svg"></a>
+                <a href="https://bit.ly/edu-learning-Ben" target="_blank"><img class="paymentpic"
+                        src="../pictures/social/whatsapp.svg"></a>
+                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank"><img class="paymentpic"
+                        src="../pictures/social/youtube.svg"></a>
+            </div>
+        </div>
+        <p class="copyright">Copyright &copy;
+            <script>document.write(new Date().getFullYear());</script> All Rights Reserved | Kicoco Mobile Phone Station
+        </p>
+    </footer>
+    <script src="../java/header.js"></script>
+</body>
+
+</html>

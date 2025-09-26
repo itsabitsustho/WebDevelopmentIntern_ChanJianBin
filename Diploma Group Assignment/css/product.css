@@ -1,0 +1,26 @@
+.category-container{
+    display: flex;
+    justify-content: space-around;
+    margin: 0 5em 5em 5em;
+}
+.category-container h4{
+    text-align: center;
+}
+.category-container img{
+    width: 150px;
+    height: 150px;
+    padding-bottom: 20px;
+}
+.brand-container{
+    background-color: antiquewhite;
+    justify-content: space-around;
+}
+.brand-container img{
+    padding-bottom: 20px;
+    padding-left: 20px;
+}
+.brand-container2{
+    background-color: antiquewhite;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}

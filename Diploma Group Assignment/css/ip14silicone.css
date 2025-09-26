@@ -1,0 +1,123 @@
+.main {
+	margin: 0 5%;
+	padding: 1% 2%;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+#product_view {
+	flex-basis: 50%;
+	display: grid;
+	grid-template-columns: 80% 15%;
+}
+
+.img-fluid {
+	background-color: rgb(179, 218, 255);
+	padding-top: 3%;
+	border-radius: 10px;
+}
+
+.small-img {
+	margin-left: 10%;
+	margin-top: 3%;
+}
+
+.small-img-col img {
+	cursor: pointer;
+	border-width: 1px;
+	background-color: rgb(179, 218, 255);
+	margin-bottom: 10px;
+	margin-left: 10px;
+	border-radius: 10px;
+	opacity: 0.6;
+	display: flex;
+}
+
+.small-img-col img:hover {
+	opacity: 1;
+}
+
+.detials {
+	flex-basis: 50%;
+}
+
+h2 {
+	margin-left: 2px;
+	margin-top: 30px;
+	padding-bottom: 1%;
+	font-size: 45px;
+}
+
+h4 {
+	font-size: 19px;
+}
+
+.buttonClass {
+	font-size: 15px;
+	font-family: Arial;
+	width: 140px;
+	height: 50px;
+	border-width: 1px;
+	color: rgba(8, 8, 8, 1);
+	border-color: rgba(246, 255, 247, 1);
+	border-top-left-radius: 28px;
+	border-top-right-radius: 28px;
+	border-bottom-left-radius: 28px;
+	border-bottom-right-radius: 28px;
+	background: rgba(242, 204, 255, 1);
+	padding: 20 20 20 20;
+}
+
+.buttonClass:hover {
+	background: rgba(252, 233, 255, 1)
+}
+
+.button {
+	margin-top: 60px;
+}
+
+select {
+	width: 100px;
+	height: 50px;
+	text-align: center;
+}
+
+.review {
+	margin-top: 50px;
+	border-radius: 10px 10px 10px 10px;
+	background-color: rgb(181, 247, 243);
+	margin: 1% 7%;
+}
+
+.reviewrow {
+	justify-content: space-evenly;
+	display: flex;
+	padding-top: 30px;
+}
+
+.review1 {
+	flex: 1;
+	position: relative;
+}
+
+.review2 {
+	flex: 1;
+	position: relative;
+}
+
+.review3 {
+	flex: 1;
+	position: relative;
+}
+
+.review h3 {
+	padding-top: 20px;
+	text-align: center;
+}
+
+.reviewimg img {
+	width: 230px;
+	height: 230px;
+	margin: 20 20 20 20;
+	float: left;
+}

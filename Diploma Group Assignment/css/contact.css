@@ -1,0 +1,85 @@
+.heading{
+    background-image: url(../pictures/professional.png);
+    background-color: #111111;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 400px;
+}
+
+.container1 h1{
+    color: white;
+    padding: 10 130 100 130;
+}
+
+.bigbody{
+    margin: 30 30 30 30;
+    background-color: rgb(212, 175, 247);
+    border-radius: 10px 10px 10px 10px;
+}
+
+.bigbody h3{
+    padding-top: 20px;
+    text-align: center;
+}
+
+.formandmap{
+    justify-content: space-evenly;
+	display: flex;
+	padding-top: 30px;
+}
+
+.form{
+    flex: 1;
+    position: relative;
+    padding-left: 10px;
+}
+
+.map{
+    flex: 1;
+    position: relative;
+    padding: 50 50 50;
+}
+
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid white;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+  }
+  
+  input[type=submit] {
+    background-color: rgb(255, 187, 255);
+    color: black;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  input[type=submit]:hover {
+    background-color: rgb(252, 221, 252);
+  }
+
+textarea{
+    resize: none;
+    height: 200px;
+    width: 950px;
+    font-size: 15px;
+}
+
+.mapouter{
+    position:relative;
+    text-align:right;
+    height:500px;
+    width:669px;
+}
+
+.gmap_canvas {
+    overflow:hidden;
+    background:none!important;
+    height:500px;
+    width:759px;
+}

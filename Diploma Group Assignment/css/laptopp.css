@@ -1,0 +1,203 @@
+body {
+    background-image: url(../pictures/laptoppic/Apple/blackground/appleblackground.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-attachment: fixed;
+    
+}
+
+
+
+
+.titlemacbook {
+    text-align: center;
+    background: linear-gradient(to right, #dda2dd 0, #DCDCDC 20%, #dda2dd 35%);
+    background-position: 0;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 4s infinite linear;
+    animation-fill-mode: forwards;
+    -webkit-text-size-adjust: none;
+    text-decoration: none;
+    white-space: nowrap;
+    font-size: 200px;
+    padding-top: 100px;
+    margin-bottom: 100px;
+    margin-right: 62px;
+}
+
+
+
+@-moz-keyframes shine {
+    0% {
+        background-position: 0;
+    }
+
+    60% {
+        background-position: 800px;
+    }
+
+    100% {
+        background-position: 1200px;
+    }
+}
+
+@-webkit-keyframes shine {
+    0% {
+        background-position: 0;
+    }
+
+    60% {
+        background-position: 800px;
+    }
+
+    100% {
+        background-position: 1200px;
+    }
+}
+
+@-o-keyframes shine {
+    0% {
+        background-position: 0;
+    }
+
+    60% {
+        background-position: 800px;
+    }
+
+    100% {
+        background-position: 1200px;
+    }
+}
+
+@keyframes shine {
+    0% {
+        background-position: 0;
+    }
+
+    60% {
+        background-position: 800px;
+    }
+
+    100% {
+        background-position: 1200px;
+    }
+}
+
+.glassbox {
+
+    margin-left: 80px;
+    margin-bottom: 50px;
+    width: 1700px;
+    height: 800px;
+    background-blend-mode: normal, soft-light;
+    -webkit-backdrop-filter: blur(1px);
+    backdrop-filter: blur(1px);
+    border-radius: 90px;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+::-webkit-scrollbar {
+    background-color: hsl(298, 88%, 16%);
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 99999em;
+    background-color: hsla(0, 0%, 100%, 0.734);
+}
+
+::-webkit-scrollbar-corner {
+    display: none;
+}
+
+
+.main {
+    margin: 0 5%;
+    padding: 7% 2%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#product_view {
+    flex-basis: 50%;
+    display: grid;
+    grid-template-columns: 80% 15%;
+}
+
+.img-fluid {
+    padding-top: 3%;
+    border-radius: 10px;
+}
+
+.small-img {
+    margin-left: 10%;
+    margin-top: 3%;
+}
+
+.small-img-col img {
+    cursor: pointer;
+    border-width: 1px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    border-radius: 10px;
+    opacity: 0.6;
+    display: flex;
+    padding: 35% 2%;
+}
+
+.small-img-col img:hover {
+    opacity: 1;
+}
+
+.detials {
+    flex-basis: 50%;
+}
+
+.detials h2,
+.detials h4,
+.detials p {
+    color: white;
+}
+
+h2 {
+    margin-left: 2px;
+    margin-top: 30px;
+    padding-bottom: 1%;
+    font-size: 45px;
+}
+
+h4 {
+    font-size: 19px;
+}
+
+.buttonClass {
+    font-size:15px;
+  font-family:Arial;
+  width:140px;
+  height:50px;
+  border-width:1px;
+  color:#fff;
+  border-color:#c584f3;
+  font-weight:bold;
+  border-top-left-radius:6px;
+  border-top-right-radius:6px;
+  border-bottom-left-radius:6px;
+  border-bottom-right-radius:6px;
+  box-shadow:inset 0px 1px 0px 0px #efdcfb;
+  text-shadow:inset 0px 1px 0px #9752cc;
+  background:linear-gradient(#dfbdfa, #bc80ea);
+}
+
+.buttonClass:hover {
+    background: linear-gradient(#bc80ea, #dfbdfa);
+}
+
+.button {
+    margin-top: 30px;
+}
+
+select {
+    width: 100px;
+    height: 50px;
+    text-align: center;
+}
