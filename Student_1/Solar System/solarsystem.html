@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Project Solaria</title>
+  <link rel="stylesheet" type="text/css" href="solar.css">
+  <link rel="stylesheet" type="text/css" href="../css/style.css">
+</head>
+
+<body>
+  <div class="loading" id="loading">Loading Solar System...</div>
+
+  <div class="controls">
+    <a href="../LearnPlanets/LearnPlanets.html">
+      <h3>⬅ Back</h3>
+    </a>
+    <h3>Controls</h3>
+    <p>🖱️ Left click + drag to orbit</p>
+    <p>🔍 Mouse wheel to zoom</p>
+    <p>👆 Click planets for info</p>
+    <p>🎯 Right click + drag to pan</p>
+  </div>
+
+  <div id="container"></div>
+
+  <div id="planetModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title" id="modalTitle"></h2>
+        <span class="close">&times;</span>
+      </div>
+      <div class="modal-body" id="modalBody"></div>
+    </div>
+  </div>
+
+  <footer>
+    &copy; Project : Solaria | All Rights Reserved
+  </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="solarSystem.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,158 @@
+body {
+	margin: 0px;
+}
+
+.navbar ul li::after {
+	content: '';
+	width: 0%;
+	height: 2px;
+	background: #ffd700;
+	display: block;
+	margin: auto;
+	transition: 0.5s;
+}
+
+#planets h1 {
+	text-align: center;
+	color: #ffd700;
+	margin-top: 30px;
+	margin-left: 100px;
+	margin-right: 100px;
+	font-size: 40px;
+}
+
+.button {
+    display: inline-block;
+    padding: 12px 24px;
+	margin-bottom: 50px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background: linear-gradient(135deg, #4a9eff, #1e3c72);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(74, 158, 255, 0.4);
+}
+
+.button:hover {
+    background: linear-gradient(135deg, #1e3c72, #4a9eff);
+    box-shadow: 0 6px 20px rgba(74, 158, 255, 0.6);
+    transform: translateY(-2px);
+}
+
+.button:active {
+    transform: translateY(1px);
+    box-shadow: 0 3px 10px rgba(74, 158, 255, 0.3);
+}
+
+.navbar ul li:hover::after {
+	width: 100%;
+}
+
+.planet-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	padding: 20px;
+	gap: 20px;
+}
+
+.planet-card {
+	background-color: #1c1f2b;
+	border: 1px solid #444;
+	border-radius: 15px;
+	width: 300px;
+	padding: 20px;
+	box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+	transition: transform 0.3s ease;
+	text-align: center;
+}
+
+.planet-card:hover {
+	transform: scale(1.05);
+}
+
+.planet-card img {
+	width: 100%;
+	height: 200px;
+	object-fit: contain;
+	border-radius: 10px;
+	margin-bottom: 15px;
+}
+
+.planet-card h2 {
+	color: #00ffff;
+}
+
+.planet-card p {
+	text-align: justify;
+}
+
+.image-button {
+	display: inline-block;
+	border: none;
+	cursor: pointer;
+	padding: 0;
+	background: none;
+	perspective: 0;
+}
+
+.image-button img {
+	display: block;
+	width: 571px;
+	height: auto;
+	border-radius: 10px;
+	justify-content: center;
+	box-shadow: 0 0 0 #2c3e50, 0 8px 15px rgba(0, 0, 0, 0.3);
+	transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.image-button:hover img {
+	transform: translateY(-4px);
+	transition: opacity 0.5s ease;
+	box-shadow: 0 0 0 #2c3e50, 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.image-button:active img {
+	transform: translateY(2px);
+	box-shadow: 0 0 0 #2c3e50, 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.planet-card-mercury:hover img {
+	content: url('https://i.pinimg.com/originals/d7/aa/19/d7aa1904f0b961caef4e85eb0d38120b.gif');
+}
+
+.planet-card-venus:hover img {
+	content: url('https://upload.wikimedia.org/wikipedia/commons/0/0e/Venus_Rotation_Movie.gif');
+}
+
+.planet-card-earth:hover img {
+	content: url('https://upload.wikimedia.org/wikipedia/commons/e/e1/Rotating_earth_animated.gif');
+}
+
+.planet-card-mars:hover img {
+	content: url('https://media3.giphy.com/media/v1.Y2lkPTZjMDliOTUyZWo3Njd1ajM2MjhoMGsydnBmMWEzZ2gwbnIybHNucHc0M2t1OGkzdCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/Wkcw6SzOtaSxG/source.gif');
+}
+
+.planet-card-jupiter:hover img {
+	content: url('https://i.pinimg.com/originals/b2/6c/8a/b26c8a86dceb0055a8719d9effed23bc.gif');
+}
+
+.planet-card-saturn:hover img {
+	content: url('https://media.tenor.com/X41MtjA-OJUAAAAM/mercury-space.gif');
+}
+
+.planet-card-uranus:hover img {
+	content: url('https://media.tenor.com/Cc8vOIn32VgAAAAM/uranus-planet.gif');
+}
+
+.planet-card-neptune:hover img {
+	content: url('https://upload.wikimedia.org/wikipedia/commons/6/6d/Neptune.gif');
+}
+
+.planet-card-pluto:hover img {
+	content: url('https://upload.wikimedia.org/wikipedia/commons/c/c1/Pluto_Rotation_Movie.gif');
+}

@@ -1,0 +1,144 @@
+.navbar ul li::after {
+	content: '';
+	width: 0%;
+	height: 2px;
+	background: #ffd700;
+	display: block;
+	margin: auto;
+	transition: 0.5s;
+}
+
+.navbar ul li:hover::after {
+	width: 100%;
+}
+
+#container {
+	width: 100vw;
+	height: 100vh;
+	cursor: grab;
+}
+
+#container:active {
+	cursor: grabbing;
+}
+
+.controls {
+	position: absolute;
+	top: 20px;
+	left: 20px;
+	z-index: 100;
+	color: white;
+	background: rgba(0, 0, 0, 0.8);
+	padding: 15px;
+	border-radius: 10px;
+	backdrop-filter: blur(10px);
+	border: 1px solid rgba(74, 158, 255, 0.3);
+}
+
+.controls h3 {
+	margin-bottom: 10px;
+	color: #4a9eff;
+}
+
+.controls p {
+	margin: 5px 0;
+	font-size: 12px;
+}
+
+.modal {
+	display: none;
+	position: fixed;
+	z-index: 1000;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.8);
+	backdrop-filter: blur(5px);
+}
+
+.modal-content {
+	background: linear-gradient(135deg, #1a1a2e, #16213e);
+	margin: 5% auto;
+	padding: 30px;
+	border: none;
+	border-radius: 15px;
+	width: 90%;
+	max-width: 600px;
+	color: white;
+	box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+.modal-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 20px;
+	border-bottom: 2px solid #4a9eff;
+	padding-bottom: 15px;
+}
+
+.modal-title {
+	font-size: 28px;
+	color: #4a9eff;
+	margin: 0;
+}
+
+.close {
+	color: #aaa;
+	font-size: 28px;
+	font-weight: bold;
+	cursor: pointer;
+	transition: color 0.3s;
+}
+
+.close:hover {
+	color: #fff;
+}
+
+.modal-body {
+	line-height: 1.6;
+}
+
+.fact-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	gap: 15px;
+	margin-top: 20px;
+}
+
+.fact-item {
+	background: rgba(74, 158, 255, 0.1);
+	padding: 15px;
+	border-radius: 8px;
+	border-left: 3px solid #4a9eff;
+}
+
+.fact-label {
+	font-weight: bold;
+	color: #4a9eff;
+	margin-bottom: 5px;
+}
+
+.loading {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: white;
+	font-size: 18px;
+}
+
+.planet-label {
+	position: absolute;
+	color: white;
+	font-size: 12px;
+	background: rgba(0, 0, 0, 0.7);
+	padding: 4px 8px;
+	border-radius: 4px;
+	pointer-events: none;
+	transform: translate(-50%, -50%);
+	z-index: 50;
+	border: 1px solid rgba(255, 255, 255, 0.5);
+	text-shadow: 1px 1px 2px black;
+}

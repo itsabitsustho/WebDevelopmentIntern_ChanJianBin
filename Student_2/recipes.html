@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Healthy ASEAN Recipes - Food Explorer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <i class="fas fa-utensils"></i>
+        ASEAN Food Explorer
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="introduction.html"><i class="fas fa-user"></i> About</a></li>
+        <li><a href="asean-explorer.html"><i class="fas fa-globe-asia"></i> ASEAN Explorer</a></li>
+        <li><a href="sustainability.html"><i class="fas fa-leaf"></i> Sustainability</a></li>
+        <li><a href="heritage.html"><i class="fas fa-heart"></i> Heritage</a></li>
+        <li><a href="recipes.html" style="color: var(--primary-blue);"><i class="fas fa-book-open"></i> Recipes</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero-recipes">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a> / <span>Healthy Recipes</span>
+      </div>
+      <h1 class="hero-title">🍲 Healthy ASEAN Recipes</h1>
+      <p class="hero-subtitle">
+        Cook authentic, nutritious dishes from Southeast Asia. 
+        Each recipe promotes wellness while celebrating cultural heritage.
+      </p>
+    </div>
+  </section>
+
+  <!-- Filter Section -->
+  <section class="filter-section">
+    <div class="container">
+      <div class="filter-tabs">
+        <button class="filter-btn active" data-country="all">
+          <i class="fas fa-globe"></i> All Recipes
+        </button>
+        <button class="filter-btn" data-country="thailand">
+          🇹🇭 Thailand
+        </button>
+        <button class="filter-btn" data-country="malaysia">
+          🇲🇾 Malaysia
+        </button>
+        <button class="filter-btn" data-country="singapore">
+          🇸🇬 Singapore
+        </button>
+        <button class="filter-btn" data-country="indonesia">
+          🇮🇩 Indonesia
+        </button>
+        <button class="filter-btn" data-country="vietnam">
+          🇻🇳 Vietnam
+        </button>
+        <button class="filter-btn" data-country="philippines">
+          🇵🇭 Philippines
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Recipes Section -->
+  <section class="recipes-section">
+    <div class="container">
+      <div class="recipes-grid" id="recipesGrid">
+        <!-- Recipes will be dynamically loaded -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal -->
+  <div id="recipeModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button class="close-btn" onclick="closeModal()">&times;</button>
+        <h2 id="modalTitle">Recipe Title</h2>
+        <p id="modalSubtitle">Recipe Description</p>
+      </div>
+      <div class="modal-body">
+        <div id="modalContent">
+          <!-- Recipe content will be dynamically loaded -->
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+
+        <div style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.2);">
+          <p>&copy; 2025 ASEAN Food Explorer. Supporting Malaysia's ASEAN Chairmanship.</p>
+          <p style="margin-top: 0.5rem; opacity: 0.8;">Promoting Inclusivity & Sustainability through Food
+            Culture</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/recipes.js"></script>
+</body>
+</html>

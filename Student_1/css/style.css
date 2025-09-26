@@ -1,0 +1,97 @@
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #0a0a23;
+        height: 50vh;
+        background-image: url('../img/Space.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        color: white;
+        display: flex;
+        flex-direction: column;
+    }
+
+    main {
+        flex: 1;
+    }
+
+    #header {
+        background-color: #23283ba1;
+        padding: 30px 0;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+
+    .navbar ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+
+    .navbar li {
+        display: inline-block;
+        margin: 0 15px;
+    }
+
+    .navbar a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    .navbar a:hover {
+        color: #ffd700;
+    }
+
+    h1 {
+        text-align: justify;
+        color: #ffd700;
+        margin-top: 30px;
+        margin-left: 100px;
+        margin-right: 100px;
+        font-size: 20px;
+    }
+
+    strong {
+        font-size: 20px;
+        color: #FFA800;
+    }
+
+    footer {
+        background-color: #111;
+        color: white;
+        padding: 10px;
+        text-align: center;
+        width: 100%;
+    }
+
+
+    .image-button {
+        display: inline-block;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+        background: none;
+        perspective: 0;
+    }
+
+    .image-button img {
+        display: block;
+        width: 571px;
+        height: auto;
+        border-radius: 10px;
+        justify-content: center;
+        box-shadow: 0 0 0 #2c3e50, 0 8px 15px rgba(0, 0, 0, 0.3);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .image-button:hover img {
+        transform: translateY(-4px);
+        box-shadow: 0 0 0 #2c3e50, 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .image-button:active img {
+        transform: translateY(2px);
+        box-shadow: 0 0 0 #2c3e50, 0 2px 5px rgba(0, 0, 0, 0.1);
+    }

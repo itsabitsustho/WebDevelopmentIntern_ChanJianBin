@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>ASEAN Explorer - Food Cultures Across Southeast Asia</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap"
+    rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+  <link href="css/style.css" rel="stylesheet" />
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a class="logo" href="index.html">
+        <i class="fas fa-utensils"></i>
+        ASEAN Food Explorer
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="introduction.html"><i class="fas fa-user"></i> About</a></li>
+        <li><a class="custom-style-100" href="asean-explorer.html"><i class="fas fa-globe-asia"></i> ASEAN Explorer</a>
+        </li>
+        <li><a href="sustainability.html"><i class="fas fa-leaf"></i> Sustainability</a></li>
+        <li><a href="heritage.html"><i class="fas fa-heart"></i> Heritage</a></li>
+        <li><a href="recipes.html"><i class="fas fa-book-open"></i> Recipes</a></li>
+      </ul>
+    </div>
+  </nav>
+  <!-- Hero Section -->
+  <section class="hero-explorer">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a> / <span>ASEAN Explorer</span>
+      </div>
+      <h1 class="hero-title">🌏 Explore ASEAN Through Food</h1>
+      <p class="hero-subtitle">
+        Discover the rich culinary heritage of 10 Southeast Asian nations.
+        Each country tells its story through flavors, traditions, and healthy eating practices.
+      </p>
+    </div>
+  </section>
+  <!-- Countries Section -->
+  <section class="countries-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Choose Your Culinary Journey</h2>
+        <p class="custom-style-101">
+          Click on any country to explore its signature healthy dishes, cultural significance, and nutritional benefits
+        </p>
+      </div>
+      <div class="countries-grid">
+        <!-- Thailand -->
+        <div class="country-card animate-slide-up" onclick="openCountryModal('thailand')">
+          <div class="country-flag custom-style-102">
+            <div class="flag-overlay">
+              <h3>🇹🇭 Thailand</h3>
+            </div>
+          </div>
+          <div class="country-info">
+            <div class="country-stats">
+              <span class="stat-badge">70M Population</span>
+              <span class="stat-badge">Street Food Capital</span>
+            </div>
+            <p class="country-description">
+              Land of smiles where every meal balances sweet, sour, salty, and spicy flavors.
+              Thai cuisine emphasizes fresh herbs and vegetables for optimal health.
+            </p>
+            <button class="explore-btn">
+              <i class="fas fa-compass"></i> Explore Thai Cuisine
+            </button>
+          </div>
+        </div>
+        <!-- Malaysia -->
+        <div class="country-card animate-slide-up" onclick="openCountryModal('malaysia')">
+          <div class="country-flag custom-style-103">
+            <div class="flag-overlay">
+              <h3>🇲🇾 Malaysia</h3>
+            </div>
+          </div>
+          <div class="country-info">
+            <div class="country-stats">
+              <span class="stat-badge">ASEAN Chair 2025</span>
+              <span class="stat-badge">Multicultural Fusion</span>
+            </div>
+            <p class="country-description">
+              A melting pot where Malay, Chinese, and Indian influences create unique fusion dishes.
+              Traditional ulam and herbs promote natural wellness.
+            </p>
+            <button class="explore-btn">
+              <i class="fas fa-compass"></i> Explore Malaysian Cuisine
+            </button>
+          </div>
+        </div>
+        <!-- Singapore -->
+        <div class="country-card animate-slide-up" onclick="openCountryModal('singapore')">
+          <div class="country-flag custom-style-104">
+            <div class="flag-overlay">
+              <h3>🇸🇬 Singapore</h3>
+            </div>
+          </div>
+          <div class="country-info">
+            <div class="country-stats">
+              <span class="stat-badge">Hawker Heritage</span>
+              <span class="stat-badge">Food Innovation</span>
+            </div>
+            <p class="country-description">
+              A food paradise where traditional hawker culture meets modern nutrition science.
+              Healthier choice symbols guide sustainable eating.
+            </p>
+            <button class="explore-btn">
+              <i class="fas fa-compass"></i> Explore Singaporean Cuisine
+            </button>
+          </div>
+        </div>
+        <!-- Indonesia -->
+        <div class="country-card animate-slide-up" onclick="openCountryModal('indonesia')">
+          <div class="country-flag custom-style-105">
+            <div class="flag-overlay">
+              <h3>🇮🇩 Indonesia</h3>
+            </div>
+          </div>
+          <div class="country-info">
+            <div class="country-stats">
+              <span class="stat-badge">17,000 Islands</span>
+              <span class="stat-badge">Spice Paradise</span>
+            </div>
+            <p class="country-description">
+              The world's largest archipelago offers incredible biodiversity in both ingredients and flavors.
+              Traditional tempeh and vegetables provide plant-based nutrition.
+            </p>
+            <button class="explore-btn">
+              <i class="fas fa-compass"></i> Explore Indonesian Cuisine
+            </button>
+          </div>
+        </div>
+        <!-- Vietnam -->
+        <div class="country-card animate-slide-up" onclick="openCountryModal('vietnam')">
+          <div class="country-flag custom-style-106">
+            <div class="flag-overlay">
+              <h3>🇻🇳 Vietnam</h3>
+            </div>
+          </div>
+          <div class="country-info">
+            <div class="country-stats">
+              <span class="stat-badge">Fresh Herbs</span>
+              <span class="stat-badge">Light &amp; Healthy</span>
+            </div>
+            <p class="country-description">
+              Vietnamese cuisine celebrates freshness with abundant herbs, vegetables, and light cooking methods.
+              Pho and spring rolls showcase healthy, balanced eating.
+            </p>
+            <button class="explore-btn">
+              <i class="fas fa-compass"></i> Explore Vietnamese Cuisine
+            </button>
+          </div>
+        </div>
+        <!-- Philippines -->
+        <div class="country-card animate-slide-up" onclick="openCountryModal('philippines')">
+          <div class="country-flag custom-style-107">
+            <div class="flag-overlay">
+              <h3>🇵🇭 Philippines</h3>
+            </div>
+          </div>
+          <div class="country-info">
+            <div class="country-stats">
+              <span class="stat-badge">7,641 Islands</span>
+              <span class="stat-badge">Seafood Rich</span>
+            </div>
+            <p class="country-description">
+              Island nation cuisine rich in seafood, vegetables, and tropical fruits.
+              Traditional cooking methods preserve nutrients and authentic flavors.
+            </p>
+            <button class="explore-btn">
+              <i class="fas fa-compass"></i> Explore Filipino Cuisine
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Modal -->
+  <div class="modal" id="countryModal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button class="close-btn" onclick="closeModal()">×</button>
+        <h2 id="modalTitle">Country Cuisine</h2>
+        <p id="modalSubtitle">Discover healthy traditional dishes</p>
+      </div>
+      <div class="modal-body">
+        <div id="modalContent">
+          <!-- Content will be dynamically loaded -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="custom-style-108">
+          <p>© 2025 ASEAN Food Explorer. Supporting Malaysia's ASEAN Chairmanship.</p>
+          <p class="custom-style-109">Promoting Inclusivity &amp; Sustainability through Food
+            Culture</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="js/asean.js"></script>
+</body>
+
+</html>

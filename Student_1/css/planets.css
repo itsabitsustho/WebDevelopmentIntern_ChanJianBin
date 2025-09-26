@@ -1,0 +1,51 @@
+body{
+	margin: 0px;
+}
+
+
+h1 {
+    text-align: center;
+    color: white;
+}
+
+.mybtn {
+    color: white;
+    height: 500px;
+    font-size: 34px;
+    margin: 70px;
+    border: none;
+    width: 500px;
+}
+
+.btnbox {
+    display: flex;
+    justify-content: center;
+}
+
+.mybtn1:hover {
+    font-weight: 900;
+	transform: scale(1.1);
+	transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+	color: transparent;
+    cursor: pointer;
+}
+
+.mybtn2:hover {
+    font-weight: 900;
+	transform: scale(1.1);
+	transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+	color: transparent;
+    cursor:pointer;
+}
+
+.mybtn1 {
+	background-image:url("../img/Solar System.jpg");
+    border-radius: 7rem;
+    background-color:black;
+}
+
+.mybtn2 {
+	background-image:url("../img/IsMarsHabitableForMankindButton.png");
+    border-radius: 7rem;
+    background-color: black;
+}
