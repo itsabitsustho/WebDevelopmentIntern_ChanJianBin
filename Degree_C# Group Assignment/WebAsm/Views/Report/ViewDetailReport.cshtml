@@ -1,0 +1,68 @@
+﻿@model Report
+
+@{
+	ViewBag.Title = "Report Details";
+}
+
+<div class="view-detail-report-all-content">
+	<div class="view-detail-report-content">
+		<a href="/Report/ViewReport" class="back-link">&larr; Back to Report List</a>
+		<h2>
+			@ViewBag.Title
+		</h2>
+		<div class="view-detail-report-content-all-details">
+
+			<div class="view-detail-report-content-details">
+				<p><b>Report Title: </b></p>
+				<p>@Model.Title</p>
+				<p><b>Report By: </b></p>
+				<p>@Model.User.Name</p>
+				<p><b>Date: </b></p>
+				<p>@Model.PostedDate.ToString("yyyy-MM-dd")</p>
+				<p><b>Area: </b></p>
+				<p>@Model.Facility.Area.Name</p>
+				<p><b>Facility: </b></p>
+				<p>@Model.Facility.Name</p>
+				<p><b>Detail: </b></p>
+				<p>@Model.Detail</p>
+				<p><b>Priority: </b></p>
+				<p>@Model.Priority</p>
+				<p><b>Status: </b></p>
+				<p>@Model.Status</p>
+			</div>
+			<div class="report-image">
+				<h3>Report Image</h3>
+				<img src="/reportImage/@Model.Photo" alt="@Model.Title" width="200" />
+			</div>
+		</div>
+
+	</div>
+
+	<div class="interaction-view-details-report-content">
+		<div>
+			<h3>Admin Reply</h3>
+			@foreach (var r in ViewBag.response)
+			{
+				<div class="report-details-admin-reply">
+					<div>
+						@r.Text
+					</div>
+					<div>
+						@r.ReplyDate
+					</div>
+				</div>
+			}
+		</div>
+		<div class="report-details-rating-review">
+			<h3>Rate and Provide Feedback on the Services</h3>
+
+			<a href="/Comment/Rating/@Model.Id" class="rate-button">Rate Report</a>
+
+			<h3>Others Reviews</h3>
+
+			<div id="rating-list">
+				<partial name="~/Views/Comment/_CommentList.cshtml" model="@ViewBag.Ratings" />
+			</div>
+		</div>
+	</div>
+</div>

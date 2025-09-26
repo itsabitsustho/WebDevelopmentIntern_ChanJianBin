@@ -1,0 +1,87 @@
+﻿@using X.PagedList
+@using X.PagedList.Mvc.Core
+@model IPagedList<Report>
+
+@{
+	ViewBag.Title = "Response Reports";
+}
+@{
+	ViewBag.links = "Response";
+}
+
+
+<div class="admin-content">
+	<h1 class="admin-header">@ViewBag.Title</h1>
+
+	<div class="response-table">
+		<table>
+			<thead>
+				<tr>
+					<th>Id</th>
+					<th>Report Title</th>
+					<th>Posted Date</th>
+					<th>Posted By</th>
+					<th>Area</th>
+					<th>Facility</th>
+					<th>Status</th>
+					<th>Priority</th>
+					<th>Actions</th>
+				</tr>
+			</thead>
+			<tbody>
+				@if (Model.Any())
+				{
+					foreach (var report in Model)
+					{
+
+						<tr>
+							<td>@report.Id</td>
+							<td>@report.Title</td>
+							<td>@report.PostedDate.ToString("yyyy-MM-dd")</td>
+							<td>@report.User.Name</td>
+							<td>@(report.Facility?.Area?.Name ?? "N/A")</td>
+							<td>@(report.Facility?.Name ?? "N/A")</td>
+							<td>@report.Status</td>
+							<td>@report.Priority</td>
+							<td>
+								<center>
+									<button data-get="/Admin/ViewReport/@report.Id" class="view-link">View</button>
+									<button data-post="/Admin/DeleteReport/@report.Id" class="delete-link" data-confirm>Delete</button>
+								</center>
+							</td>
+						</tr>
+
+					}
+				}
+				else
+				{
+					<tr>
+						<td colspan="9" class="no-data">No reports found.</td>
+					</tr>
+				}
+			</tbody>
+		</table>
+
+		<div>
+			<center>
+				@{
+					var options = PagedListRenderOptions.ClassicPlusFirstAndLast;
+					options.LinkToFirstPageFormat = "First";
+					options.LinkToLastPageFormat = "Last";
+					options.LinkToPreviousPageFormat = "Previous";
+					options.LinkToNextPageFormat = "Next";
+
+				}
+			</center>
+
+		</div>
+
+		@Html.PagedListPager(
+					Model,
+					page => $"?page={page}",
+					options
+					)
+
+	</div>
+</div>
+

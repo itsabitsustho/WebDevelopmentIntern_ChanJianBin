@@ -1,0 +1,42 @@
+﻿@model IEnumerable<MaintenanceTeamVM>
+
+
+<p>@Model.Count() record(s)</p>
+
+<div class="backMTPV">
+	<table class="table">
+		<tr>
+			<th>Id</th>
+			<th>Owner Name</th>
+			<th>Email</th>
+			<th>Contact Number</th>
+			<th>Company Name</th>
+			<th>Company Type</th>
+			<th>Report Assign</th>
+			<th></th>
+			<th></th>
+		</tr>
+		@foreach (var s in Model)
+		{
+			<tr>
+				<td>@s.Id</td>
+				<td>@s.Name</td>
+				<td>@s.Email</td>
+				<td>@s.Contact</td>
+				<td>@s.CompanyName</td>
+				<td>@s.CompanyType</td>
+				<td>@s.ReportTitle</td>
+				<td>
+					<button data-get="/MaintenanceTeam/MaintenanceTeamAssign/@s.Id">Assign a problem</button>
+					
+				</td>
+				<td>
+					<form method="post" action="/MaintenanceTeam/RemoveReport/@s.Id"
+						  class="confirm-form" data-confirm="Are you sure you want to remove the assigned problem?">
+						<button type="submit" class="btn-remove">Remove assigned problem</button>
+					</form>
+				</td>
+			</tr>
+		}
+	</table>
+</div>

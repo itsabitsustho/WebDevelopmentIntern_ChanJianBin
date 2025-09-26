@@ -1,0 +1,34 @@
+﻿@model IEnumerable<FacilitiesVM>
+
+
+<p>@Model.Count() record(s)</p>
+
+
+    <table class="table">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Area</th>
+        <th></th>
+        <th></th>
+    </tr>
+
+    @foreach (var s in Model)
+    {
+        <tr>
+            <td>@s.Id</td>
+            <td>@s.Name</td>
+            <td>@s.AreaName</td>
+            <td>
+                <button data-post="/Facilities/FacilitiesDetails/@s.Id">Details</button>
+                <button data-get="/Facilities/UpdateFacilities/@s.Id">Update</button>
+            </td>
+			<td>
+                <form method="post" action="/Facilities/Delete/@s.Id"
+                      class="confirm-form" data-confirm="Are you sure you want to remove this facilities?">
+                    <button type ="submit" class="btn-remove">Delete</button>
+                </form>
+            </td>
+        </tr>
+    }
+    </table>

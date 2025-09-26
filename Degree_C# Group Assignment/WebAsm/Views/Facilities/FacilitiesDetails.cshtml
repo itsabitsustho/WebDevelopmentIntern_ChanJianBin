@@ -1,0 +1,48 @@
+﻿@model FacilitiesVM
+
+@{
+	ViewBag.Title = "Home | Detail";
+}
+
+<div class="allBackMemView">
+	<div>
+		@if (Model.PhotoURLs.Any())
+		{
+			foreach (var photoURL in Model.PhotoURLs)
+			{
+				<img src="/uploads/@photoURL" class="presentPhotoUP" style="max-width: 200px; margin: 10px;">
+			}
+		}
+		else
+		{
+			<p>No photos available.</p>
+		}
+	</div>
+
+	<table class="table">
+		<tr>
+			<th>Id</th>
+			<td>@Model.Id</td>
+		</tr>
+		<tr>
+			<th>Name</th>
+			<td>@Model.Name</td>
+		</tr>
+		<tr>
+			<th>Area</th>
+			<td>@Model.AreaName</td>
+		</tr>
+		<tr>
+		</tr>
+	</table>
+
+	<p>
+		<button data-get="/">Index</button>
+		<button data-get="/Facilities/UpdateFacilities/@Model.Id">Update</button>
+		<form method="post" action="/Facilities/Delete/@Model.Id"
+			  class="confirm-form" data-confirm="Are you sure you want to remove this facilities ?">
+			<button type="submit" class="btn-remove">Delete</button>
+		</form>
+
+	</p>
+</div>

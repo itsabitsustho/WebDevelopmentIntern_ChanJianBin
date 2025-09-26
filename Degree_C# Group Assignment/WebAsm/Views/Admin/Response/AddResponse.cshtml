@@ -1,0 +1,35 @@
+﻿@model ResponseVM
+
+@{
+	ViewBag.Title = "Add Response";
+}
+
+@{
+	ViewBag.links = "Response";
+}
+
+
+<div class="admin-content">
+	<h1>
+		@ViewBag.Title
+	</h1>
+	<div class="view-detail-report-content-all-details-2">
+		<form method="post">
+			<div asp-validation-summary="ModelOnly"></div>
+
+			<div class="view-detail-report-content-details">
+				<label asp-for="Text"><b>Response to Report: *</b></label>
+				<textarea asp-for="Text" class="styled-textarea"></textarea>
+				<span asp-validation-for="Text"></span>
+
+				<input asp-for="ReportId" class="styled-input" hidden/>
+
+			</div>
+			<div class="report-button">
+				<button class="styled-reset" type="reset">Reset</button>
+				<button class="styled-button" type="submit">Submit</button>
+			</div>
+		</form>
+
+	</div>
+</div>

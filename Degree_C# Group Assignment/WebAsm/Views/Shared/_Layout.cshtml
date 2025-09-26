@@ -1,0 +1,134 @@
+﻿@inject DB db
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>@ViewBag.Title</title>
+	<link rel="shortcut icon" href="/images/logo.png">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+	<link rel="stylesheet" href="/css/app.css" asp-append-version="true">
+	<link rel="stylesheet" href="/css/pager.css" />
+	<link rel="stylesheet" href="/css/report.css" asp-append-version="true">
+	<link rel="stylesheet" href="/css/account.css" asp-append-version="true">
+	<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+	@RenderSection("head", false)
+</head>
+<body>
+	<div class="info">@Html.Raw(TempData["Info"])</div>
+
+	<header>
+		<div>
+			<a href="/"><h1>DIDARO Residence Report and Response System</h1></a>
+		</div>
+		<div class="user-info-login-display">
+			@if (User.Identity!.IsAuthenticated)
+			{
+				<div>
+					@{
+						var user = db.Users.FirstOrDefault(u => u.ResidencePlateNumber == User.Identity.Name);
+						if (user != null)
+						{
+							<text>@($"{user.Name} | {user.ResidencePlateNumber}")</text>
+						}
+						if (user == null)
+						{
+							<text>null</text>
+						}
+					}
+				</div>
+			}
+
+			@if (User.Identity!.IsAuthenticated)
+			{
+				string identityName = User.Identity?.Name ?? string.Empty;
+				var photoURL = db.Users.FirstOrDefault(u => u.ResidencePlateNumber == identityName)?.PhotoURL;
+				<img src="/photos/@photoURL">
+			}
+
+		</div>
+
+	</header>
+
+	<nav>
+		<div>
+
+
+
+			@if (User.IsInRole("Resident"))
+			{
+				<a href="/">Main Page</a>
+				<a href="/Report/ViewReport">View All Report</a>
+				<a href="/Report/AddReport">Report An Issues</a>
+				<a href="/Report/PersonalReportList">Personal Report List</a>
+				<a href="/Facilities/List">Facility List</a>
+				<a href="/Home/ContactUs">Contact Us</a>
+
+			}
+			@if (User.IsInRole("Admin"))
+
+			{
+				<a href="/Account/UpdateProfile">Profile</a>
+
+				<a href="/Admin">Admin</a>
+
+			}
+
+		</div>
+
+		<div>
+			@if (User.IsInRole("Maintenance"))
+			{
+				<a href="/Account/UpdateProfile">Profile</a>
+			}
+			@if (User.IsInRole("Resident"))
+			{
+				<a href="/Account/UpdateProfile">Profile</a>
+			}
+
+
+
+			@if (User.Identity.IsAuthenticated)
+			{
+				<a href="/Account/Logout">Logout</a>
+			}
+			else
+			{
+				<a href="/Account/Login">Login</a>
+				<a href="/Account/Register">Register</a>
+			}
+
+		</div>
+	</nav>
+
+
+	<main>
+		@{
+			if (ViewBag.Title != "All Report"
+			&& ViewBag.Title != "Report Details"
+			&& ViewBag.Title != "Report An Issues"
+			&& ViewBag.Title != "Past Reports"
+			&& ViewBag.Title != "Edit Report"
+			)
+			{
+				<h1>@ViewBag.Title</h1>
+			}
+		}
+
+		@RenderBody()
+	</main>
+
+	<footer class="footer">
+		<p><b>&copy; @DateTime.Today.Year DIDARO. All Rights Reserved.</b></p>
+	</footer>
+
+	<script src="/js/jquery.min.js"></script>
+	<script src="/js/jquery.unobtrusive-ajax.min.js"></script>
+	<script src="/js/jquery.validate.min.js"></script>
+	<script src="/js/jquery.validate.unobtrusive.min.js"></script>
+	<script src="/js/app.js" asp-append-version="true"></script>
+	@RenderSection("foot", false)
+</body>
+</html>

@@ -1,0 +1,47 @@
+﻿@model IEnumerable<Rating>
+
+<link rel="stylesheet" href="/css/commentList.css" asp-append-version="true">
+
+<table class="table">
+
+    @if (Model != null && Model.Any())
+    {
+        @foreach (var r in Model)
+        {
+            <div class="comment-list-container">
+                <div class="comment-list">
+
+
+                    <div class="comment">
+                        
+                        <div class="comment-userphoto""><img src="/images/favicon.png"></div>
+                        <div class="comment-date-rate">
+                        <div class="comment-date">@r.RatingDate.ToString("yyyy-MM-dd")</div>
+                         <div class="commment-Rate">Rating:@r.StarCount/5</div>
+                        </div>
+                        <div class="comment-text">@r.Text</div>
+                        <div class="comment-photo">
+                            @foreach (var image in r.RatingImages)
+                            {
+                                <img src="@Url.Content("~/ratingPhotos/" + image.ImageURL)" alt="Rating Photo" class="Image-Rating"/>
+                            }
+
+                        </div>
+                        <div comment-UpDel>
+                            <button data-get="/Comment/Update/@r.Id" class="btnUpdate">Edit</button>
+
+                            <button data-post="/Comment/Delete/@r.Id" class="btnDelete">Delete</button>
+                            
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        }
+    }
+
+    else
+    {
+        <p>No comment for this report</p>
+    }
+</table> 

@@ -1,0 +1,51 @@
+﻿@model FacilitiesUpdateVM
+
+@{
+	ViewBag.Title = "Home | Update";
+}
+
+
+<div class="allBackMemView">
+	<div class="allInsertDetails">
+		@if (Model.PhotoURLs.Any())
+		{
+			foreach (var photoURL in Model.PhotoURLs)
+			{
+				<img src="/uploads/@photoURL" style="max-width: 200px; margin: 10px;" class="presentPhotoUP">
+			}
+		}
+
+		<form method="post" class="form" enctype="multipart/form-data">
+			<div asp-validation-summary="ModelOnly"></div>
+
+			
+			
+
+			<label asp-for="Id"></label>
+			<b>@Model.Id</b>
+			<br>
+
+			<label asp-for="Name"></label>
+			<input asp-for="Name" autofocus>
+			<span asp-validation-for="Name"></span>
+
+			<label asp-for="AreaID"></label>
+			<select asp-for="AreaID" asp-items="ViewBag.AreaList">
+				<option value="">- Select One -</option>
+			</select>
+			<span asp-validation-for="AreaID"></span>
+
+			<label asp-for="Photos" class="form-label"></label>
+			<label class="upload">
+				<input asp-for="Photos" class="form-control" type="file" multiple hidden>
+				<img src="/images/photo.jpg">
+			</label>
+			<span asp-validation-for="Photos" class="text-danger"></span>
+			
+			<section>
+				<button>Submit</button>
+				<button type="reset">Reset</button>
+			</section>
+		</form>
+	</div>
+</div>

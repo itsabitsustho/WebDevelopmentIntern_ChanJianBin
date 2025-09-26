@@ -1,0 +1,49 @@
+﻿@model Report
+
+@{
+	ViewBag.Title = "View Reports";
+}
+
+@{
+	ViewBag.links = "Response";
+}
+
+<div class="admin-content">
+
+	<h1>
+		@ViewBag.Title
+	</h1>
+	<div class="view-detail-report-content-all-details">
+
+		<div class="view-detail-report-content-details">
+			<p><b>Report Title: </b></p>
+			<p>@Model.Title</p>
+			<p><b>Report By: </b></p>
+			<p>@Model.User.Name</p>
+			<p><b>Date: </b></p>
+			<p>@Model.PostedDate.ToString("yyyy-MM-dd")</p>
+			<p><b>Area: </b></p>
+			<p>@Model.Facility.Area.Name</p>
+			<p><b>Facility: </b></p>
+			<p>@Model.Facility.Name</p>
+			<p><b>Detail: </b></p>
+			<p>@Model.Detail</p>
+			<p><b>Priority: </b></p>
+			<p>@Model.Priority</p>
+			<p><b>Status: </b></p>
+			<p>@Model.Status</p>
+			<div class="action-btn">
+				<button data-get="/Admin/ReportAction/@Model.Id">Report Action</button>
+			</div>
+		</div>
+		<div class="report-image">
+			<h3>Report Image</h3>
+			<img src="/reportImage/@Model.Photo" alt="@Model.Title" width="200" />
+		</div>
+
+		<div class="reponse-section">
+			<partial name="Response">
+		</div>
+	</div>
+
+</div>

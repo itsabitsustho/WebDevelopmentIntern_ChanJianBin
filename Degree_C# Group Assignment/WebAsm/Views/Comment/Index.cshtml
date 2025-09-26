@@ -1,0 +1,28 @@
+﻿@model IEnumerable<Rating>
+
+
+@{
+    ViewBag.Title = "Comment | Index";
+}
+
+<link rel="stylesheet" href="/css/commentList.css" asp-append-version="true">
+
+<table class="table">
+    @foreach (var r in Model)
+    {
+        <tr>
+            <div class="comment">
+                <div class="commment-user">@r.Id</div>
+                <div class="comment-text">@r.Text</div>
+                @* <div class="comment-photo"><img src="~/Photos/@r.Photo"></div> *@
+                <div comment-UpDel>
+                    <button data-get="/Comment/Update/@r.Id">Update</button>
+                    <button data-post="/Comment/Delete/@r.Id" data-ajax-confirm="Are you sure?">Delete</button>
+                </div>
+            </div>
+
+        </tr> 
+    }
+</table>
+
+

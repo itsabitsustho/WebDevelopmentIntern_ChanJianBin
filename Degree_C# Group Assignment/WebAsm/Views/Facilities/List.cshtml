@@ -1,0 +1,37 @@
+﻿<div class="allBackMemView">
+	<div class="ajax-areasMV">
+		<!-- Link for All -->
+		<a data-ajax="true" data-ajax-update="#target" data-ajax-loading="#loader" href="?">All</a>
+
+		<!-- Links for Areas -->
+		@foreach (var area in ViewBag.Areas)
+		{
+
+			<text> | </text>
+			<a data-ajax="true" data-ajax-update="#target" data-ajax-loading="#loader"
+			   href="?areaName=@area.Name">@area.Name</a>
+
+		}
+
+		<img src="/images/loader.gif" id="loader" style="display: none" />
+	</div>
+
+
+	<div id="target" class="backAllDetailsF">
+		<!-- Load the partial view content here -->
+		<partial name="_MFPV" />
+	</div>
+
+</div>
+
+@section foot {
+	<script>
+		let timer = null;
+
+		// Handle input change and delay search submission
+		$('#name').on('input', e => {
+			clearTimeout(timer);
+			timer = setTimeout(() => $(e.target.form).submit(), 500);
+		});
+	</script>
+}

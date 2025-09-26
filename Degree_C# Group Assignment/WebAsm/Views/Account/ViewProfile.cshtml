@@ -1,0 +1,33 @@
+﻿@model UserProfileVM
+
+@{
+    ViewBag.Title = "User Profile";
+}
+
+<div class="profile-container">
+    <h2>User Profile</h2>
+
+    <div class="profile-section">
+        <img src="/photos/@Model.PhotoURL" alt="Profile Picture" class="profile-picture">
+        <form asp-action="UpdateProfilePicture" method="post" enctype="multipart/form-data">
+            <label for="profile-picture">Update Profile Picture:</label>
+            <input type="file" name="photo" accept="image/*" required>
+            <button type="submit">Update</button>
+        </form>
+    </div>
+
+    <div class="profile-info">
+        <p><strong>Name:</strong> @Model.Name</p>
+        <p><strong>Residence Plate Number:</strong> @Model.ResidencePlateNumber</p>
+        <p><strong>Email:</strong> @Model.Email</p>
+    </div>
+
+    <div class="reset-password">
+        <h3>Reset Password</h3>
+        <form asp-action="ResetPassword" method="post">
+            <label for="newPassword">New Password:</label>
+            <input type="password" name="newPassword" required>
+            <button type="submit">Reset Password</button>
+        </form>
+    </div>
+</div>

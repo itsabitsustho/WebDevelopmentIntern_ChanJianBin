@@ -1,0 +1,46 @@
+﻿@model IEnumerable<FacilitiesVM>
+
+@{
+    ViewBag.Title = "MemberView Facilities Page";
+}
+
+<!-- Facilities Table -->
+<div id="target">
+    @if (Model != null && Model.Any())
+    {
+        <div class="backMFV">
+            @foreach (var fac in Model)
+            {
+                <div class="backMFVD">
+                    <div class="facility-photos">
+                        @if (fac.PhotoURLs != null && fac.PhotoURLs.Any())
+                        {
+                            foreach (var url in fac.PhotoURLs)
+                            {
+                                <img src="/uploads/@url" class="facility-photo"
+                                     alt="Photo of @fac.Name"
+                                     style="width: 150px; height: auto; margin-right: 5px;" />
+                            }
+                        }
+                        else
+                        {
+                            <span>No photos available</span>
+                        }
+                    </div>
+                    <div class="facility-details">
+                        <h2>All About Facilities</h2>
+                        <h3>Name: @fac.Name</h3>
+                        <h3>Area: @fac.AreaName</h3>
+                    </div>
+                </div>
+            }
+        </div>
+    }
+    else
+    {
+        <p>No facilities found.</p>
+    }
+</div>
+
+
+<img src="/images/loader.gif" id="loader" style="display: none" />

@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>@ViewBag.Title</title>
+	<link rel="shortcut icon" href="/images/logo.png">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+	<link rel="stylesheet" href="/css/app.css" asp-append-version="true">
+	<link rel="stylesheet" href="/css/appAdmin.css" asp-append-version="true">
+	<link rel="stylesheet" href="/css/pagerAdmin.css" asp-append-version="true">
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+	@RenderSection("head", false)
+</head>
+<body class="admin-body">
+	<div class="info">@Html.Raw(TempData["Info"])</div>
+
+	<div class="admin-sidebar">
+
+		<ul class="nav-links">
+			<li>
+				<a class="@(ViewBag.Title == "Admin Dashboard" ? "selected-nav-links" : "")"
+				   href="/Admin"><span class="icon-black-white">📊</span> Dashboard</a>
+			</li>
+			<li>
+				<a class="@(ViewBag.links == "User" ? "selected-nav-links" : "")"
+				href="/Admin/UserList"><span class="icon-black-white">🏠</span> Resident Maintenance</a></li>
+			<li><a class="@(ViewBag.links == "Response" ? "selected-nav-links" : "")"
+				href="/Admin/Response"><span class="icon-black-white">💬</span> Responses and Action</a></li>
+			<li><a href="/Vendor"><span class="icon-black-white">🛍️</span> Vendors Maintenance</a></li>
+			<li><a href="/Facilities/FacilitiesList"><span class="icon-black-white">🏗️</span> Areas and Facilities Maintenance</a></li>
+			<li><a href="/Facilities/InsertFacilities"><span class="icon-black-white">🏗️</span> Insert</a></li>
+			<li><a href="/MaintenanceTeam/MaintenanceTeamList"><span class="icon-black-white">🏗️</span> List MaintenanceTeam</a></li>
+			<li>
+				<a class="@(ViewBag.Title == "Summary" ? "selected-nav-links" : "")"
+				href="/Admin/Summary"><span class="icon-black-white">📈</span> Summary Analysis</a></li>
+			<li><a href="/Account/Logout" class="logout"><span class="icon-black-white">🚪</span>Logout</a></li>
+		</ul>
+
+	</div>
+
+	<main>
+		@RenderBody()
+	</main>
+
+	<script src="/js/jquery.min.js"></script>
+	<script src="/js/jquery.unobtrusive-ajax.min.js"></script>
+	<script src="/js/jquery.validate.min.js"></script>
+	<script src="/js/jquery.validate.unobtrusive.min.js"></script>
+	<script src="/js/app.js" asp-append-version="true"></script>
+	@RenderSection("foot", false)
+</body>
+</html>
+

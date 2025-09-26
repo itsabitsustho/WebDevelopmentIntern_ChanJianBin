@@ -1,0 +1,187 @@
+﻿@model dynamic
+@{
+	ViewBag.Title = "Summary";
+}
+
+
+
+<div class="admin-content">
+	<h1>@ViewBag.Title</h1>
+
+	<div class="chart-container">
+		<div class="chart-content">
+			<p>Report By Status</p>
+			<canvas id="statusChart"></canvas>
+		</div>
+		<div class="chart-content">
+			<p>Most Facility Reported</p>
+			<canvas id="facilityChart"></canvas>
+		</div>
+		<div class="chart-content">
+			<p>Total Number of Residents</p>
+			<canvas id="totalResident"></canvas>
+		</div>
+		<div class="chart-content">
+			<p>Total number of  Rating</p>
+			<canvas id="starChart"></canvas>
+		</div>
+	</div>
+
+	<script>
+		var statusValue = @Html.Raw(Json.Serialize(Model.Labels));
+		var countStatus = @Html.Raw(Json.Serialize(Model.Values));
+		var statusColors = [
+			"#cd6ec3",
+			"#64b6db",
+			"#f4cd81",
+			"#f1b889",
+			"#7be97f",
+			"#ff9089"
+		];
+
+		new Chart("statusChart", {
+			type: "pie",
+			data: {
+				labels: statusValue,
+				datasets: [{
+					backgroundColor: statusColors.slice(0, statusValue.length),
+					data: countStatus
+				}]
+			},
+			options: {
+				responsive: true,
+				maintainAspectRatio: false,
+				title: {
+					display: true,
+					text: "Reports by Status",
+					fontColor: "#e0e0e0"
+				},
+				legend: {
+					labels: {
+						fontColor: "#e0e0e0"
+					}
+				}
+			}
+		});
+
+		var xValues =  @Html.Raw(Json.Serialize(ViewBag.facilityName));
+		var yValues = @Html.Raw(Json.Serialize(ViewBag.reportCounts));
+		var facilityColors = [
+			"#cd6ec3",
+			"#64b6db",
+			"#f4cd81",
+			"#f1b889",
+			"#7be97f",
+			"#ff9089"
+		];
+
+		new Chart("facilityChart", {
+			type: "pie",
+			data: {
+				labels: xValues,
+				datasets: [{
+					backgroundColor: facilityColors.slice(0, xValues.length),
+					data: yValues
+				}]
+			},
+			options: {
+				responsive: true,
+				maintainAspectRatio: false,
+				title: {
+					display: true,
+					text: "Reports by Status",
+					fontColor: "#e0e0e0"
+				},
+				legend: {
+					labels: {
+						fontColor: "#e0e0e0"
+					}
+				}
+			}
+		});
+
+		var userValues = ["Resident"];
+		var totalUsers = [@ViewBag.totalUser];
+		var userColors = ["#cd6ec3"];
+
+		new Chart("totalResident", {
+		  type: "bar",
+		  data: {
+			labels: userValues,
+			datasets: [{
+			  backgroundColor: userColors,
+			  data: totalUsers
+			}]
+		  },
+		  options: {
+			responsive: true,
+			maintainAspectRatio: false,
+			legend: {
+			  display: false,
+			},
+			title: {
+			  display: true,
+			  text: "Total of Number Resident"
+			},
+			plugins: {
+			  legend: {
+				display: false
+			  }
+			},
+			scales: {
+			  y: {
+				ticks: {
+				  callback: function(value) {
+					return value % 1 === 0 ? value : '';
+				  }
+				}
+			  }
+			}
+		  }
+		});
+
+
+
+		var xValues = @Html.Raw(Json.Serialize(ViewBag.starCount));
+		var yValues = @Html.Raw(Json.Serialize(ViewBag.userCount));
+		var barColors = ["#e700e7", "#64b6db", "#f4cd81", "#f1b889", "#7be97f"];
+
+		new Chart("starChart", {
+		  type: "bar",
+		  data: {
+			labels: xValues,
+			datasets: [{
+			  backgroundColor: barColors,
+			  data: yValues
+			}]
+		  },
+		  options: {
+					responsive: true,
+			maintainAspectRatio: false,
+			legend: {
+			  display: false,
+			},
+			title: {
+			  display: true,
+			  text: "Total of Number Resident"
+			},
+			plugins: {
+			  legend: {
+				display: false
+			  }
+		  },
+					scales: {
+			  y: {
+				ticks: {
+				  callback: function(value) {
+					return value % 1 === 0 ? value : '';
+				  }
+				}
+			  }
+			}
+		  }
+		});
+	</script>
+
+
+</div>

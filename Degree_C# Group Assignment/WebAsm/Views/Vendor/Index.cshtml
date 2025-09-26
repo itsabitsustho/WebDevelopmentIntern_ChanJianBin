@@ -1,0 +1,40 @@
+﻿
+<link rel="stylesheet" href="/css/vendorList.css" asp-append-version="true">
+
+@{
+    ViewBag.Title = "Vendor List";
+}
+
+
+
+<div class="header">
+    <a href="/Vendor/Insert" class="btnAdd">Add</a>
+    <div class="searchBar">
+        <form data-ajax="true" data-ajax-update="#target" data-ajax-loading="#loader">
+            @Html.TextBox("name", "", new { Type = "search", autofocus = "", data_trim = "" })
+            <button class="btnSearch" type="submit">Search</button>
+        </form>
+    </div>
+</div>
+
+
+<div id="target">
+    <partial name="_VendorList">
+</div>
+
+@section foot {
+    <script>
+        let timer = null;
+
+        $('#name').on('input', e=> {
+            clearTimeout(timer);
+                timer = setTimeout(() => $(e.target.form).submit(), 500);
+        });
+
+    </script>
+
+
+}
+
+
+

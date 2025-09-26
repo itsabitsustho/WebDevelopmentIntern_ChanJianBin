@@ -1,0 +1,66 @@
+﻿@model RatingUpdateVM
+
+
+@{
+    ViewBag.Title = "Edit Comment";
+
+}
+
+<link rel="stylesheet" href="/css/RatingForm.css" asp-append-version="true">
+
+<form method="post" class="form" enctype="multipart/form-data">
+    <div asp-validation-summary="ModelOnly"></div>
+
+    @* <label asp-for="Id" hidden></label> *@
+    <b hidden>@Model?.Id</b>
+    <br>
+
+    <label asp-for="StarCount">Rating (1 to 5):</label>
+    <input asp-for="StarCount" type="number" min="1" max="5">
+    <span asp-validation-for="StarCount"></span>
+
+    <label asp-for="Text" hidden></label>
+    <textarea asp-for="Text" data-trim placeholder="add comment"></textarea>
+    <span asp-validation-for="Text"></span>
+
+    <label asp-for="Photos" hidden></label>
+    <label class="update-upload">
+        <input asp-for="Photos" accept="image/jpeg,image/png" multiple hidden>
+        @if (Model.PhotoURLs != null && Model.PhotoURLs.Any())
+        {
+            foreach (var photoUrl in Model.PhotoURLs)
+            {
+            <div>
+                <img src="/ratingPhotos/@photoUrl" alt="Rating Photo" style="width:100px; height:auto;" />
+                
+            </div>
+            }
+        }
+    </label>
+    <span asp-validation-for="Photos"></span>
+
+    
+    <input asp-for="RatingDate" data-upper data-trim hidden>
+    <span asp-validation-for="RatingDate"></span>
+
+
+    
+    <b hidden>@Model?.ReportId</b>
+    <input asp-for="ReportId" hidden>
+    <br>
+
+   
+    <b hidden>@Model?.UserId</b>
+    <input asp-for="UserId" hidden>
+    <br>
+
+
+    <div class="Rating-part">
+        <section class="button-comment">
+            <button type="reset">Reset</button>
+            <button type="button" onclick="window.history.back();" class="cancel">Cancel</button>
+            <button type="submit" id="CommentButton">Update</button>
+        </section>
+    </div>
+</form>
+

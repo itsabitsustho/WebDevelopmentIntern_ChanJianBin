@@ -1,0 +1,73 @@
+﻿@model RatingVM
+
+
+<link rel="stylesheet" href="/css/RatingForm.css" asp-append-version="true">
+<form method="post" class="form" enctype="multipart/form-data">
+    <div asp-validation-summary="ModelOnly"></div>
+
+    @{
+        ViewBag.Title = "Rating";
+    }
+
+    @* <label asp-for="Id" hidden></label> *@
+    <input asp-for="Id" autofocus hidden> 
+    <span asp-validation-for="Id"></span>
+
+    <br>
+    <label asp-for="StarCount">Rating (1 to 5):</label>
+    <input asp-for="StarCount" type="number" min="1"  max="5">
+    <span asp-validation-for="StarCount"></span>
+   
+    <label asp-for="Text" hidden></label>
+    <textarea asp-for="Text" data-trim placeholder="add comment"></textarea>
+    <span asp-validation-for="Text"></span>
+
+    <br><br>
+
+    @* <label asp-for="RatingDate"></label> *@
+    <input asp-for="RatingDate" data-upper data-trim hidden>
+
+    @* <label asp-for="ReportId"></label> *@
+    <input asp-for="ReportId" data-upper data-trim hidden> 
+    <span asp-validation-for="ReportId"></span>
+
+    @* <label asp-for="UserId"></label> *@
+    <input asp-for="UserId" data-upper data-trim hidden>
+    <span asp-validation-for="UserId"></span>
+
+    @* <label asp-for="Photo"></label> *@
+     <label class="upload">
+        <input asp-for="Photos" accept="image/jpeg,image/png" multiple hidden>
+        <img src="/images/AddPicture.jpg">
+     </label>
+     <span asp-validation-for="Photos"></span>
+
+     <br>
+    <div class="Rating-part">
+    <section class="button-comment">
+        <button type="button" onclick="window.history.back();" class="cancel">Cancel</button>
+        <button type="submit" id="CommentButton">Comment</button>
+    </section>
+    </div>
+
+</form>
+
+
+
+@section foot {
+    <script>
+        // Enable hidden file validation
+        $.validator.setDefaults({ ignore: '' });
+
+        let timer = null;
+
+        $('#name').on('input', (e) => {
+            clearTimeout(timer);
+                timer = setTimeout(() => {$(e.target.form).submit();}, 500);
+        });
+
+
+    </script>
+}
+
+

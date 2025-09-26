@@ -1,0 +1,39 @@
+﻿@{
+    ViewBag.Title = "Admin Dashboard";
+}
+
+<div class="admin-content">
+    <h1>@ViewBag.Title</h1>
+
+    <div class="container">
+        <div class="card">
+            <p>@Model.TotalUsers</p>
+            <h3>Total Users 👤</h3>
+        </div>
+        <div class="card">
+            <p>@Model.TotalReports</p>
+            <h3>Total Reports 📝</h3>
+        </div>
+        <div class="card">
+            <p>@Model.TotalResponses</p>
+            <h3>Total Responses 💬</h3>
+        </div>
+        <div class="card">
+            <p>@Model.TotalUserActive</p>
+            <h3>Total User Activated</h3>
+        </div>
+        <div class="card">
+            <p>@Model.TotalReportCompleted</p>
+            <h3>Total Report Resolved</h3>
+        </div>
+        <div class="card">
+            <p>@Model.TotalRating</p>
+            <h3>Total Rating for Response</h3>
+        </div>
+        <div class="card">
+            <p>@Model.TotalUserDiactivated</p>
+            <h3>Total User Deactivated 💬</h3>
+        </div>
+    </div>
+</div>
+

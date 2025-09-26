@@ -1,0 +1,21 @@
+﻿@model ResetPasswordVM
+
+@{
+    ViewBag.Title = "Verify OTP and Reset Password";
+}
+<body>
+    <div class="form-container1">
+        <form class="update-form" method="post">
+            <div asp-validation-summary="ModelOnly"></div>
+
+            <label asp-for="OTP"></label>
+            <input asp-for="OTP" autofocus>
+            <span asp-validation-for="OTP"></span>
+
+            <section>
+                <button type="submit">Submit</button>
+                <button type="reset">Reset</button>
+            </section>
+        </form>
+    </div>
+</body>

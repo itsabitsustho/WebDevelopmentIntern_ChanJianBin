@@ -1,0 +1,73 @@
+﻿@model VendorVM
+
+@{
+    ViewBag.Title = "Vendor Update";
+
+}
+
+<link rel="stylesheet" href="/css/vendorReg.css" asp-append-version="true">
+<form method="POST" class="form" enctype="multipart/form-data">
+
+    <div asp-validation-summary="All"></div>
+    <div id="bck-size-ad">
+
+        <label asp-for="Id" hidden></label>
+        <b hidden>@Model?.Id</b>
+        <br>
+        
+        <div class="columnName">
+            <div class="inputField" id="inputInfo">
+                <label asp-for="OwnerName" class="headword">First Name:</label><br>
+                <input asp-for="OwnerName" data-trim placeholder="First Name">
+            </div>
+
+        </div>
+
+        <br>
+
+        <div class="inputField" id="inputInfo">
+            <label asp-for="Email" class="headword">Email:</label><br>
+            <input type="hidden" name="originalVendorEmail" value="@Model.Email" />
+            <input asp-for="Email" data-trim>
+        </div>
+
+        </br>
+
+        <div class="columnAddress">
+            <div id="inputField">
+                <label asp-for="Contact" class="headword">Contact:</label><br>
+                <input asp-for="Contact" data-trim>
+
+            </div>
+        </div>
+        <br>
+
+        <div class="columnAddress2">
+            <div id="inputField">
+                <label asp-for="CompanyName" class="headword">Company Name:</label><br>
+                <input asp-for="CompanyName" data-trim>
+
+            </div>
+
+            <div id="inputField">
+                <label asp-for="CompanyType" class="headword">Company Type:</label><br>
+                <input asp-for="CompanyType" data-trim>
+
+            </div>
+
+        </div>
+        <br>
+
+        <section>
+            <div class="AddAndCanButton">
+                <button type="submit" class="btnAdd">Update</button><br>
+                <input type="reset" id="reset" value="Reset" class="btnAdd" />
+            </div>
+            <br>
+            <button type="button" class="btnAdd" onclick="window.history.back();">Cancel</button>
+        </section>
+
+    </div>
+</form>
+
+

@@ -1,0 +1,43 @@
+﻿@model List<UserListVM>
+
+@{
+    ViewData["Title"] = "User List";
+}
+
+@{
+    ViewBag.links = "User";
+}
+
+<div class="admin-content">
+    <h2>User List</h2>
+    <br />
+    <div>
+        <a class="addMaintainBtn" href="/Account/addMaintenanceTeam">Add Maintenance Team</a>
+
+    </div>
+    <br/>
+    <table class="all-member-table">
+        <thead>
+            <tr>
+                <th>Email</th>
+                <th>Residence Plate Number</th>
+                <th>Discriminator</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var user in Model)
+            {
+                <tr>
+                    <td>@user.Email</td>
+                    <td>@user.ResidencePlateNumber</td>
+                    <td>@user.Discriminator</td>
+                    <td>
+                        <a href="@Url.Action("Edit", "Admin", new { id = user.Id })" class="btn btn-primary">Edit</a>
+                        <a href="@Url.Action("Delete", "Admin", new { id = user.Id })" class="btn btn-danger">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

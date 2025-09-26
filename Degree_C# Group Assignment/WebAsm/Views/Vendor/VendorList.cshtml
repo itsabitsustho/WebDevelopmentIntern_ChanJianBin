@@ -1,0 +1,65 @@
+﻿@model IEnumerable<Vendor>
+
+
+
+<link rel="stylesheet" href="/css/vendorList.css" asp-append-version="true">
+@{
+    ViewBag.Title = "Vendor";
+}
+
+
+
+<table class="table">
+    <thead>
+    <tr>
+    
+    <td>
+    <div class="header">
+    <div class="left-section">
+        <button><a href="/Vendor/Insert">Add</a></button>
+    </div>
+    <div class="right-section">
+        <form>
+            @Html.TextBox("name", "", new { Type = "search", autofocus = "", data_trim = "" })
+            <button>Search</button>
+        </form>
+    </div>
+    </div>
+            </td>
+            
+    
+
+     </tr>
+
+    
+
+    <tr class="tableHead"> 
+        <th>Id</th>
+        <th>Owner Name</th>
+        <th>Email</th>
+        <th>Contact</th>
+        <th>Company Name</th>
+        <th>Company Type</th>
+        <th></th>
+        <th></th>
+    </tr>
+    </thead>
+
+    <tbody>
+    @foreach (var v in Model)
+    {
+        <tr>
+            <td>@v.Id</td>
+            <td>@v.OwnerName</td>
+            <td>@v.Email</td>
+            <td>@v.Contact</td>
+            <td>@v.CompanyName</td>
+            <td>@v.CompanyType</td>
+            <td><button class="btnUpdate" data-get="/Vendor/Update/@v.Id">Update</button></td>
+            <td><button class="btnDelete" data-post="/Vendor/Delete/@v.Id">Delete</button></td>
+
+        </tr>
+    }
+    </tbody>
+</table>
+

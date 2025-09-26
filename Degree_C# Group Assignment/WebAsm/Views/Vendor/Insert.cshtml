@@ -1,0 +1,77 @@
+﻿@model VendorVM
+
+@{
+    ViewBag.Title = "Add Vendor";
+}
+
+
+<link rel="stylesheet" href="/css/vendorReg.css" asp-append-version="true">
+<form method="POST" class="form" enctype="multipart/form-data">
+
+    <div asp-validation-summary="ModelOnly"></div>
+    <div id="bck-size-ad">
+        
+
+        <label asp-for="Id" hidden></label>
+        <input asp-for="Id" autofocus hidden>
+        <span asp-validation-for="Id"></span>
+    
+        <div class="columnName">
+            <div class="inputField" id="inputInfo">
+                <label asp-for="OwnerName" class="headword">First Name:</label><br>
+                <input asp-for="OwnerName" data-trim placeholder="First Name">
+                <span asp-validation-for="OwnerName"></span>
+            </div>
+            
+        </div>
+
+        <br>
+
+        <div class="inputField" id="inputInfo">
+            <label asp-for="Email" class="headword">Email:</label><br>
+            <input asp-for="Email" data-trim>
+            <span asp-validation-for="Email"></span>
+        </div>
+
+        </br>
+
+        <div class="columnAddress">
+            <div id="inputField">
+                <label asp-for="Contact" class="headword">Contact:</label><br>
+                <input asp-for="Contact" data-trim>
+                <span asp-validation-for="Contact"></span>
+               
+            </div>
+        </div>
+        <br>
+
+        <div class="columnAddress2">
+            <div id="inputField">
+                <label asp-for="CompanyName" class="headword">Company Name:</label><br>
+                <input asp-for="CompanyName" data-trim>
+                <span asp-validation-for="CompanyName"></span>
+                            
+            </div>
+
+            <div id="inputField">
+                <label asp-for="CompanyType" class="headword">Company Type:</label><br>
+                <input asp-for="CompanyType" data-trim>
+                <span asp-validation-for="CompanyType"></span>
+               
+            </div>
+           
+        </div>
+        <br>
+
+        <section>
+            <div class="AddAndCanButton">
+                <button type="submit" class="btnAdd">Register</button><br>
+                <input type="reset" id="reset" value="Reset" class="btnAdd" />
+            </div>
+            <br>
+            <button type="button" class="btnAdd" onclick="window.history.back();">Cancel</button>
+        </section>
+
+    </div>
+</form>
+

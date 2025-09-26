@@ -1,0 +1,59 @@
+﻿@model RegisterVM
+
+@{
+    ViewBag.Title = "Account | Register";
+}
+
+<body>
+    <div class="form-container">
+        <form class="update-form" method="post" enctype="multipart/form-data">
+            <div asp-validation-summary="All"></div>
+
+            <label asp-for="Email"></label>
+            <input asp-for="Email" autofocus>
+            <span asp-validation-for="Email"></span>
+
+            <label asp-for="Password"></label>
+            <input asp-for="Password">
+            <span asp-validation-for="Password"></span>
+
+            <label asp-for="Confirm"></label>
+            <input asp-for="Confirm">
+            <span asp-validation-for="Confirm"></span>
+
+            <label asp-for="Name"></label>
+            <input asp-for="Name">
+            <span asp-validation-for="Name"></span>
+			
+            <div><sub>*Your Residence Plate Number will be your login ID, please enter by according to your Unit Number.</sub>
+            </div>
+                <label asp-for="ResidencePlateNumber"></label>
+            <input asp-for="ResidencePlateNumber" />
+            <span asp-validation-for="ResidencePlateNumber"></span>
+            
+
+            <label asp-for="Photo"></label>
+            <label class="upload">
+                <small>Select Photo...</small>
+                <input asp-for="Photo" accept="image/jpeg,image/png" hidden>
+                <img src="/images/photo.jpg">
+            </label>
+            <span asp-validation-for="Photo"></span>
+
+            <!-- reCAPTCHA Widget -->
+            <div class="g-recaptcha" data-sitekey="6LftuqgqAAAAAFj6N8PamxssEOuHM5mTi9nVmQLh"></div>
+            <span class="text-danger" asp-validation-for="Recaptcha"></span>
+
+            <section>
+                <button type="submit">Register</button>
+                <button type="reset">Reset</button>
+            </section>
+        </form>
+    </div>
+    @section foot {
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+        <script>
+            $.validator.setDefaults({ ignore: '' });
+        </script>
+    }
+</body>

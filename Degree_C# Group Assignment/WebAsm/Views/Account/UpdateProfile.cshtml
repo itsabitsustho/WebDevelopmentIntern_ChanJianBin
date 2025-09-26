@@ -1,0 +1,41 @@
+﻿@model UpdateProfileVM
+
+@{
+    ViewBag.Title = "Account | Update Profile";
+}
+
+<div class="form-container">
+<form class="update-form" method="post" enctype="multipart/form-data">
+    <div asp-validation-summary="ModelOnly"></div>
+    <label asp-for="Photo"></label>
+		<label class="upload">
+			<small>Select Photo...</small>
+			<input asp-for="Photo" accept="image/jpeg,image/png" hidden>
+			<img src="/photos/@Model.PhotoURL">
+		</label>
+        <span asp-validation-for="Photo"></span>
+
+    <label asp-for="Email"></label>
+    <input asp-for="Email" />
+        <span asp-validation-for="Email"></span>
+    <br>
+
+    <label asp-for="Name"></label>
+    <input asp-for="Name">
+	<span asp-validation-for="Name"></span>
+    <button type="button" class="update-password-button"
+                onclick="location.href='@Url.Action("UpdatePassword", "Account",new { ResidentPlateNumber = Model.ResidencePlateNumber })'">
+            Update Password
+        </button>
+   <label asp-for="ResidencePlateNumber"></label>
+   <input asp-for="ResidencePlateNumber" readonly>
+
+    <sup>*Residence Plate Number is not editable. To edit, please contact the management.</sup>
+		<br /><br />
+
+    <section>
+        <button>Update</button>
+        <button type="reset">Reset</button>
+    </section>
+</form>
+</div>

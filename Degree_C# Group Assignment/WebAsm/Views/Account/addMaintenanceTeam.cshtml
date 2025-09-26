@@ -1,0 +1,40 @@
+﻿@model AddMaintenanceTeamVM
+
+@{
+    ViewBag.Title = "Account | Register";
+}
+
+<body>
+    <div class="form-container">
+        <form class="update-form" method="post" enctype="multipart/form-data">
+            <div asp-validation-summary="All"></div>
+
+            <label asp-for="Email"></label>
+            <input asp-for="Email" autofocus>
+            <span asp-validation-for="Email"></span>
+
+            <label asp-for="Name"></label>
+            <input asp-for="Name">
+            <span asp-validation-for="Name"></span>
+
+            <label asp-for="ResidencePlateNumber"></label>
+            <input asp-for="ResidencePlateNumber" />
+            <span asp-validation-for="ResidencePlateNumber"></span>
+            <p>Please note that the Residence Plate Number is used to login the account.</p>
+
+            <label asp-for="Photo"></label>
+            <label class="upload">
+                <small>Select Photo...</small>
+                <input asp-for="Photo" accept="image/jpeg,image/png" hidden>
+                <img src="/images/photo.jpg">
+            </label>
+            <span asp-validation-for="Photo"></span>
+
+            <section>
+                <button type="submit">Register</button>
+                <button type="reset">Reset</button>
+            </section>
+        </form>
+    </div>
+
+</body>

@@ -1,0 +1,341 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\JianbinChan\\Downloads\\New WebAsm\\New WebAsm\\WebAsm\\wwwroot\\css\\RatingForm.css",
+      "PackagePath": "staticwebassets\\css\\RatingForm.css"
+    },
+    {
+      "Id": "C:\\Users\\JianbinChan\\Downloads\\New WebAsm\\New WebAsm\\WebAsm\\wwwroot\\css\\account.css",
+      "PackagePath": "staticwebassets\\css\\account.css"
+    },
+    {
+      "Id": "C:\\Users\\JianbinChan\\Downloads\\New WebAsm\\New WebAsm\\WebAsm\\wwwroot\\css\\app.css",
+      "PackagePath": "staticwebassets\\css\\app.css"
+    },
+    {
+      "Id": "C:\\Users\\JianbinChan\\Downloads\\New WebAsm\\New WebAsm\\WebAsm\\wwwroot\\css\\appAdmin.css",
+      "PackagePath": "staticwebassets\\css\\appAdmin.css"
+    },
+    {
+      "Id": "C:\\Users\\JianbinChan\\Downloads\\New WebAsm\\New WebAsm\\WebAsm\\wwwroot\\css\\commentList.css",
+      "PackagePath": "staticwebassets\\css\\commentList.css"
+    },
+    {
+      "Id": "C:\\Users\\JianbinChan\\Downloads\\New WebAsm\\New WebAsm\\WebAsm\\wwwroot\\css\\pager.css",
+      "PackagePath": "staticwebassets\\css\\pager.css"
+    },
+    {
+      "Id": "C:\\Users\\JianbinChan\\Downloads\\New WebAsm\\New WebAsm\\WebAsm\\wwwroot\\css\\pagerAdmin.css",
+      "PackagePath": "staticwebassets\\css\\pagerAdmin.css"
+    },
+    {
+      "Id": "C:\\Users\\JianbinChan\\Downloads\\New WebAsm\\New WebAsm\\WebAsm\\wwwroot\\css\\report.css",
+      "PackagePath": "staticwebassets\\css\\report.css"
+    },
+    {
+      "Id": "C:\\Users\\JianbinChan\\Downloads\\New WebAsm\\New WebAsm\\WebAsm\\wwwroot\\css\\vendorList.css",
+      "PackagePath": "staticwebassets\\css\\vendorList.css"
+    },
+    {
+      "Id": "C:\\Users\\JianbinChan\\Downloads\\New WebAsm\\New WebAsm\\WebAsm\\wwwroot\\css\\vendorReg.css",
+      "PackagePath": "staticwebassets\\css\\vendorReg.css"
+    },
+    {
+      "Id": "C:\\Users\\JianbinChan\\Downloads\\New WebAsm\\New WebAsm\\WebAsm\\wwwroot\\images\\back1.webp",
+      "PackagePath": "staticwebassets\\images\\back1.webp"
+    },
+    {
+      "Id": "C:\\Users\\JianbinChan\\Downloads\\New WebAsm\\New WebAsm\\WebAsm\\wwwroot\\images\\background.png",
+      "PackagePath": "staticwebassets\\images\\background.png"
+    },
+    {
+      "Id": "C:\\Users\\JianbinChan\\Downloads\\New WebAsm\\New WebAsm\\WebAsm\\wwwroot\\images\\favicon.png",
+      "PackagePath": "staticwebassets\\images\\favicon.png"
+    },
+    {
+      "Id": "C:\\Users\\JianbinChan\\Downloads\\New WebAsm\\New WebAsm\\WebAsm\\wwwroot\\images\\loginBg.jpg",
+      "PackagePath": "staticwebassets\\images\\loginBg.jpg"
+    },
+    {
+      "Id": "C:\\Users\\JianbinChan\\Downloads\\New WebAsm\\New WebAsm\\WebAsm\\wwwroot\\images\\logo.png",
+      "PackagePath": "staticwebassets\\images\\logo.png"
+    },
+    {
+      "Id": "C:\\Users\\JianbinChan\\Downloads\\New WebAsm\\New WebAsm\\WebAsm\\wwwroot\\images\\photo.jpg",
+      "PackagePath": "staticwebassets\\images\\photo.jpg"
+    },
+    {
+      "Id": "C:\\Users\\JianbinChan\\Downloads\\New WebAsm\\New WebAsm\\WebAsm\\wwwroot\\images\\techsupport.png",
+      "PackagePath": "staticwebassets\\images\\techsupport.png"
+    },
+    {
+      "Id": "C:\\Users\\JianbinChan\\Downloads\\New WebAsm\\New WebAsm\\WebAsm\\wwwroot\\js\\app.js",
+      "PackagePath": "staticwebassets\\js\\app.js"
+    },
+    {
+      "Id": "C:\\Users\\JianbinChan\\Downloads\\New WebAsm\\New WebAsm\\WebAsm\\wwwroot\\js\\jquery.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery.min.js"
+    },
+    {
+      "Id": "C:\\Users\\JianbinChan\\Downloads\\New WebAsm\\New WebAsm\\WebAsm\\wwwroot\\js\\jquery.unobtrusive-ajax.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery.unobtrusive-ajax.min.js"
+    },
+    {
+      "Id": "C:\\Users\\JianbinChan\\Downloads\\New WebAsm\\New WebAsm\\WebAsm\\wwwroot\\js\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery.validate.min.js"
+    },
+    {
+      "Id": "C:\\Users\\JianbinChan\\Downloads\\New WebAsm\\New WebAsm\\WebAsm\\wwwroot\\js\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "C:\\Users\\JianbinChan\\Downloads\\New WebAsm\\New WebAsm\\WebAsm\\wwwroot\\photos\\3010898627244114b787cb787ff8a634.jpg",
+      "PackagePath": "staticwebassets\\photos\\3010898627244114b787cb787ff8a634.jpg"
+    },
+    {
+      "Id": "C:\\Users\\JianbinChan\\Downloads\\New WebAsm\\New WebAsm\\WebAsm\\wwwroot\\photos\\3ae4f83f9adb4cf6b98a0e5392997890.jpg",
+      "PackagePath": "staticwebassets\\photos\\3ae4f83f9adb4cf6b98a0e5392997890.jpg"
+    },
+    {
+      "Id": "C:\\Users\\JianbinChan\\Downloads\\New WebAsm\\New WebAsm\\WebAsm\\wwwroot\\photos\\468f0baf294844b6b75b1abc8b314369.jpg",
+      "PackagePath": "staticwebassets\\photos\\468f0baf294844b6b75b1abc8b314369.jpg"
+    },
+    {
+      "Id": "C:\\Users\\JianbinChan\\Downloads\\New WebAsm\\New WebAsm\\WebAsm\\wwwroot\\photos\\590baa510a51402fa2faee5f16929e06.jpg",
+      "PackagePath": "staticwebassets\\photos\\590baa510a51402fa2faee5f16929e06.jpg"
+    },
+    {
+      "Id": "C:\\Users\\JianbinChan\\Downloads\\New WebAsm\\New WebAsm\\WebAsm\\wwwroot\\photos\\7074e7c0626e423587bd7cf7f8614079.jpg",
+      "PackagePath": "staticwebassets\\photos\\7074e7c0626e423587bd7cf7f8614079.jpg"
+    },
+    {
+      "Id": "C:\\Users\\JianbinChan\\Downloads\\New WebAsm\\New WebAsm\\WebAsm\\wwwroot\\photos\\8c72d21cd97141a494e2351f171a758d.jpg",
+      "PackagePath": "staticwebassets\\photos\\8c72d21cd97141a494e2351f171a758d.jpg"
+    },
+    {
+      "Id": "C:\\Users\\JianbinChan\\Downloads\\New WebAsm\\New WebAsm\\WebAsm\\wwwroot\\photos\\bce44e0fd9504143a87a6292c55cdc7f.jpg",
+      "PackagePath": "staticwebassets\\photos\\bce44e0fd9504143a87a6292c55cdc7f.jpg"
+    },
+    {
+      "Id": "C:\\Users\\JianbinChan\\Downloads\\New WebAsm\\New WebAsm\\WebAsm\\wwwroot\\photos\\d533c79867f44310a88af182bf5bd06c.jpg",
+      "PackagePath": "staticwebassets\\photos\\d533c79867f44310a88af182bf5bd06c.jpg"
+    },
+    {
+      "Id": "C:\\Users\\JianbinChan\\Downloads\\New WebAsm\\New WebAsm\\WebAsm\\wwwroot\\photos\\d84953f86cc347e7bd437150b19efbc3.jpg",
+      "PackagePath": "staticwebassets\\photos\\d84953f86cc347e7bd437150b19efbc3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\JianbinChan\\Downloads\\New WebAsm\\New WebAsm\\WebAsm\\wwwroot\\photos\\e642fd48954e4357adc79134e9d26c12.jpg",
+      "PackagePath": "staticwebassets\\photos\\e642fd48954e4357adc79134e9d26c12.jpg"
+    },
+    {
+      "Id": "C:\\Users\\JianbinChan\\Downloads\\New WebAsm\\New WebAsm\\WebAsm\\wwwroot\\ratingPhotos\\06afe7097e4b470c8dac8f053e3bc7e6.jpg",
+      "PackagePath": "staticwebassets\\ratingPhotos\\06afe7097e4b470c8dac8f053e3bc7e6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\JianbinChan\\Downloads\\New WebAsm\\New WebAsm\\WebAsm\\wwwroot\\ratingPhotos\\28061af5975d474bb1e06dc2c30afd28.jpg",
+      "PackagePath": "staticwebassets\\ratingPhotos\\28061af5975d474bb1e06dc2c30afd28.jpg"
+    },
+    {
+      "Id": "C:\\Users\\JianbinChan\\Downloads\\New WebAsm\\New WebAsm\\WebAsm\\wwwroot\\ratingPhotos\\39c5e54c2a2c49d4a141ddbb61bdaf53.jpg",
+      "PackagePath": "staticwebassets\\ratingPhotos\\39c5e54c2a2c49d4a141ddbb61bdaf53.jpg"
+    },
+    {
+      "Id": "C:\\Users\\JianbinChan\\Downloads\\New WebAsm\\New WebAsm\\WebAsm\\wwwroot\\ratingPhotos\\456baa3c8e5c4a79bedfa334bac39615.jpg",
+      "PackagePath": "staticwebassets\\ratingPhotos\\456baa3c8e5c4a79bedfa334bac39615.jpg"
+    },
+    {
+      "Id": "C:\\Users\\JianbinChan\\Downloads\\New WebAsm\\New WebAsm\\WebAsm\\wwwroot\\ratingPhotos\\616336da33d646d0949c199ceda4a351.jpg",
+      "PackagePath": "staticwebassets\\ratingPhotos\\616336da33d646d0949c199ceda4a351.jpg"
+    },
+    {
+      "Id": "C:\\Users\\JianbinChan\\Downloads\\New WebAsm\\New WebAsm\\WebAsm\\wwwroot\\ratingPhotos\\72d0bec275244d0483dbf6843ca5e63c.jpg",
+      "PackagePath": "staticwebassets\\ratingPhotos\\72d0bec275244d0483dbf6843ca5e63c.jpg"
+    },
+    {
+      "Id": "C:\\Users\\JianbinChan\\Downloads\\New WebAsm\\New WebAsm\\WebAsm\\wwwroot\\ratingPhotos\\7b4f7ea546864a899e7883c6f927323b.jpg",
+      "PackagePath": "staticwebassets\\ratingPhotos\\7b4f7ea546864a899e7883c6f927323b.jpg"
+    },
+    {
+      "Id": "C:\\Users\\JianbinChan\\Downloads\\New WebAsm\\New WebAsm\\WebAsm\\wwwroot\\ratingPhotos\\7e836cc6ccfa4edbb65fc84105f09e5f.jpg",
+      "PackagePath": "staticwebassets\\ratingPhotos\\7e836cc6ccfa4edbb65fc84105f09e5f.jpg"
+    },
+    {
+      "Id": "C:\\Users\\JianbinChan\\Downloads\\New WebAsm\\New WebAsm\\WebAsm\\wwwroot\\ratingPhotos\\9e7cff2879af472da808e67d6f3bebde.jpg",
+      "PackagePath": "staticwebassets\\ratingPhotos\\9e7cff2879af472da808e67d6f3bebde.jpg"
+    },
+    {
+      "Id": "C:\\Users\\JianbinChan\\Downloads\\New WebAsm\\New WebAsm\\WebAsm\\wwwroot\\ratingPhotos\\aba5e6025aa4481ca37c6c64df5fe667.jpg",
+      "PackagePath": "staticwebassets\\ratingPhotos\\aba5e6025aa4481ca37c6c64df5fe667.jpg"
+    },
+    {
+      "Id": "C:\\Users\\JianbinChan\\Downloads\\New WebAsm\\New WebAsm\\WebAsm\\wwwroot\\ratingPhotos\\bfa20e3c79694912acd51259ee01ddc9.jpg",
+      "PackagePath": "staticwebassets\\ratingPhotos\\bfa20e3c79694912acd51259ee01ddc9.jpg"
+    },
+    {
+      "Id": "C:\\Users\\JianbinChan\\Downloads\\New WebAsm\\New WebAsm\\WebAsm\\wwwroot\\ratingPhotos\\ce784895597346d386a91a60160b3557.jpg",
+      "PackagePath": "staticwebassets\\ratingPhotos\\ce784895597346d386a91a60160b3557.jpg"
+    },
+    {
+      "Id": "C:\\Users\\JianbinChan\\Downloads\\New WebAsm\\New WebAsm\\WebAsm\\wwwroot\\ratingPhotos\\eaa69775e21d4337b8ecd65389ba10fb.jpg",
+      "PackagePath": "staticwebassets\\ratingPhotos\\eaa69775e21d4337b8ecd65389ba10fb.jpg"
+    },
+    {
+      "Id": "C:\\Users\\JianbinChan\\Downloads\\New WebAsm\\New WebAsm\\WebAsm\\wwwroot\\ratingPhotos\\f00e7e5401754354a0c3acf66bdf0eda.jpg",
+      "PackagePath": "staticwebassets\\ratingPhotos\\f00e7e5401754354a0c3acf66bdf0eda.jpg"
+    },
+    {
+      "Id": "C:\\Users\\JianbinChan\\Downloads\\New WebAsm\\New WebAsm\\WebAsm\\wwwroot\\ratingPhotos\\f30d56bbc46f4dd1b6403775e598a9c8.jpg",
+      "PackagePath": "staticwebassets\\ratingPhotos\\f30d56bbc46f4dd1b6403775e598a9c8.jpg"
+    },
+    {
+      "Id": "C:\\Users\\JianbinChan\\Downloads\\New WebAsm\\New WebAsm\\WebAsm\\wwwroot\\reportImage\\5b090e6d7e4743789124b35f72f8b19b.jpg",
+      "PackagePath": "staticwebassets\\reportImage\\5b090e6d7e4743789124b35f72f8b19b.jpg"
+    },
+    {
+      "Id": "C:\\Users\\JianbinChan\\Downloads\\New WebAsm\\New WebAsm\\WebAsm\\wwwroot\\reportImage\\6c92daf3b5d240d5b79608286d16379b.jpg",
+      "PackagePath": "staticwebassets\\reportImage\\6c92daf3b5d240d5b79608286d16379b.jpg"
+    },
+    {
+      "Id": "C:\\Users\\JianbinChan\\Downloads\\New WebAsm\\New WebAsm\\WebAsm\\wwwroot\\reportImage\\74a35a5e5805465eb3380ed95d64c3a5.jpg",
+      "PackagePath": "staticwebassets\\reportImage\\74a35a5e5805465eb3380ed95d64c3a5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\JianbinChan\\Downloads\\New WebAsm\\New WebAsm\\WebAsm\\wwwroot\\reportImage\\ae15253609b2441e8f651b0250ab0450.jpg",
+      "PackagePath": "staticwebassets\\reportImage\\ae15253609b2441e8f651b0250ab0450.jpg"
+    },
+    {
+      "Id": "C:\\Users\\JianbinChan\\Downloads\\New WebAsm\\New WebAsm\\WebAsm\\wwwroot\\reportImage\\d9c2ca8888aa4e959c8f62f1839b7c7a.jpg",
+      "PackagePath": "staticwebassets\\reportImage\\d9c2ca8888aa4e959c8f62f1839b7c7a.jpg"
+    },
+    {
+      "Id": "C:\\Users\\JianbinChan\\Downloads\\New WebAsm\\New WebAsm\\WebAsm\\wwwroot\\uploads\\0c1850170e894c3dad4f98caf2231492.jpg",
+      "PackagePath": "staticwebassets\\uploads\\0c1850170e894c3dad4f98caf2231492.jpg"
+    },
+    {
+      "Id": "C:\\Users\\JianbinChan\\Downloads\\New WebAsm\\New WebAsm\\WebAsm\\wwwroot\\uploads\\0c4626067e78415f87b26002cc219214.jpg",
+      "PackagePath": "staticwebassets\\uploads\\0c4626067e78415f87b26002cc219214.jpg"
+    },
+    {
+      "Id": "C:\\Users\\JianbinChan\\Downloads\\New WebAsm\\New WebAsm\\WebAsm\\wwwroot\\uploads\\2d744aee6f0f4f9282294f25c117b89d.jpg",
+      "PackagePath": "staticwebassets\\uploads\\2d744aee6f0f4f9282294f25c117b89d.jpg"
+    },
+    {
+      "Id": "C:\\Users\\JianbinChan\\Downloads\\New WebAsm\\New WebAsm\\WebAsm\\wwwroot\\uploads\\338c7552b5cc44558911964661702fff.jpg",
+      "PackagePath": "staticwebassets\\uploads\\338c7552b5cc44558911964661702fff.jpg"
+    },
+    {
+      "Id": "C:\\Users\\JianbinChan\\Downloads\\New WebAsm\\New WebAsm\\WebAsm\\wwwroot\\uploads\\40dcc03fa8da4330b23cf7aca22757cb.jpg",
+      "PackagePath": "staticwebassets\\uploads\\40dcc03fa8da4330b23cf7aca22757cb.jpg"
+    },
+    {
+      "Id": "C:\\Users\\JianbinChan\\Downloads\\New WebAsm\\New WebAsm\\WebAsm\\wwwroot\\uploads\\4eb1984f78fd4177ac62b8fa13091297.jpg",
+      "PackagePath": "staticwebassets\\uploads\\4eb1984f78fd4177ac62b8fa13091297.jpg"
+    },
+    {
+      "Id": "C:\\Users\\JianbinChan\\Downloads\\New WebAsm\\New WebAsm\\WebAsm\\wwwroot\\uploads\\5a3fb46efc1843bb9c99046d14208704.jpg",
+      "PackagePath": "staticwebassets\\uploads\\5a3fb46efc1843bb9c99046d14208704.jpg"
+    },
+    {
+      "Id": "C:\\Users\\JianbinChan\\Downloads\\New WebAsm\\New WebAsm\\WebAsm\\wwwroot\\uploads\\5becb27e36c24e278a400b252a9aade6.jpg",
+      "PackagePath": "staticwebassets\\uploads\\5becb27e36c24e278a400b252a9aade6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\JianbinChan\\Downloads\\New WebAsm\\New WebAsm\\WebAsm\\wwwroot\\uploads\\5f1fb9c91a904039bef25eed2df7208d.jpg",
+      "PackagePath": "staticwebassets\\uploads\\5f1fb9c91a904039bef25eed2df7208d.jpg"
+    },
+    {
+      "Id": "C:\\Users\\JianbinChan\\Downloads\\New WebAsm\\New WebAsm\\WebAsm\\wwwroot\\uploads\\60644c10ba2b41fa93dc8050dcd0de5e.jpg",
+      "PackagePath": "staticwebassets\\uploads\\60644c10ba2b41fa93dc8050dcd0de5e.jpg"
+    },
+    {
+      "Id": "C:\\Users\\JianbinChan\\Downloads\\New WebAsm\\New WebAsm\\WebAsm\\wwwroot\\uploads\\617e8cff8ced43f88f28d8c6b1a2c424.jpg",
+      "PackagePath": "staticwebassets\\uploads\\617e8cff8ced43f88f28d8c6b1a2c424.jpg"
+    },
+    {
+      "Id": "C:\\Users\\JianbinChan\\Downloads\\New WebAsm\\New WebAsm\\WebAsm\\wwwroot\\uploads\\7606434bfe094c75b09bfb15e1180c02.jpg",
+      "PackagePath": "staticwebassets\\uploads\\7606434bfe094c75b09bfb15e1180c02.jpg"
+    },
+    {
+      "Id": "C:\\Users\\JianbinChan\\Downloads\\New WebAsm\\New WebAsm\\WebAsm\\wwwroot\\uploads\\7b501d809b6645e0923b2f077164d63f.jpg",
+      "PackagePath": "staticwebassets\\uploads\\7b501d809b6645e0923b2f077164d63f.jpg"
+    },
+    {
+      "Id": "C:\\Users\\JianbinChan\\Downloads\\New WebAsm\\New WebAsm\\WebAsm\\wwwroot\\uploads\\851bd1459b484d298c6a712988376cda.jpg",
+      "PackagePath": "staticwebassets\\uploads\\851bd1459b484d298c6a712988376cda.jpg"
+    },
+    {
+      "Id": "C:\\Users\\JianbinChan\\Downloads\\New WebAsm\\New WebAsm\\WebAsm\\wwwroot\\uploads\\8bff93b01b6046fba3de0cd3286a7b4f.jpg",
+      "PackagePath": "staticwebassets\\uploads\\8bff93b01b6046fba3de0cd3286a7b4f.jpg"
+    },
+    {
+      "Id": "C:\\Users\\JianbinChan\\Downloads\\New WebAsm\\New WebAsm\\WebAsm\\wwwroot\\uploads\\924d960a1fd047b7ab7043a4cd94e359.jpg",
+      "PackagePath": "staticwebassets\\uploads\\924d960a1fd047b7ab7043a4cd94e359.jpg"
+    },
+    {
+      "Id": "C:\\Users\\JianbinChan\\Downloads\\New WebAsm\\New WebAsm\\WebAsm\\wwwroot\\uploads\\a16845b163204e7e840b2cac384a5d77.jpg",
+      "PackagePath": "staticwebassets\\uploads\\a16845b163204e7e840b2cac384a5d77.jpg"
+    },
+    {
+      "Id": "C:\\Users\\JianbinChan\\Downloads\\New WebAsm\\New WebAsm\\WebAsm\\wwwroot\\uploads\\a6da27ce02bc4e3d8151f07634ec2f43.jpg",
+      "PackagePath": "staticwebassets\\uploads\\a6da27ce02bc4e3d8151f07634ec2f43.jpg"
+    },
+    {
+      "Id": "C:\\Users\\JianbinChan\\Downloads\\New WebAsm\\New WebAsm\\WebAsm\\wwwroot\\uploads\\c34dfe43bd944d519974d46de0bae172.jpg",
+      "PackagePath": "staticwebassets\\uploads\\c34dfe43bd944d519974d46de0bae172.jpg"
+    },
+    {
+      "Id": "C:\\Users\\JianbinChan\\Downloads\\New WebAsm\\New WebAsm\\WebAsm\\wwwroot\\uploads\\c5bcf696857d4930b8a240f233c92cde.jpg",
+      "PackagePath": "staticwebassets\\uploads\\c5bcf696857d4930b8a240f233c92cde.jpg"
+    },
+    {
+      "Id": "C:\\Users\\JianbinChan\\Downloads\\New WebAsm\\New WebAsm\\WebAsm\\wwwroot\\uploads\\d8e3c8560ac947618710128961a10c78.jpg",
+      "PackagePath": "staticwebassets\\uploads\\d8e3c8560ac947618710128961a10c78.jpg"
+    },
+    {
+      "Id": "C:\\Users\\JianbinChan\\Downloads\\New WebAsm\\New WebAsm\\WebAsm\\wwwroot\\uploads\\db7fcaf286724e8dade649e67d8c933b.jpg",
+      "PackagePath": "staticwebassets\\uploads\\db7fcaf286724e8dade649e67d8c933b.jpg"
+    },
+    {
+      "Id": "C:\\Users\\JianbinChan\\Downloads\\New WebAsm\\New WebAsm\\WebAsm\\wwwroot\\uploads\\e5e26c1d50144df0a806db9717cae76e.jpg",
+      "PackagePath": "staticwebassets\\uploads\\e5e26c1d50144df0a806db9717cae76e.jpg"
+    },
+    {
+      "Id": "C:\\Users\\JianbinChan\\Downloads\\New WebAsm\\New WebAsm\\WebAsm\\wwwroot\\uploads\\e822d5d6740548e7ab4cf114f9fb0295.jpg",
+      "PackagePath": "staticwebassets\\uploads\\e822d5d6740548e7ab4cf114f9fb0295.jpg"
+    },
+    {
+      "Id": "C:\\Users\\JianbinChan\\Downloads\\New WebAsm\\New WebAsm\\WebAsm\\wwwroot\\uploads\\f4255b3ec603414ca980076222f7834c.jpg",
+      "PackagePath": "staticwebassets\\uploads\\f4255b3ec603414ca980076222f7834c.jpg"
+    },
+    {
+      "Id": "C:\\Users\\JianbinChan\\Downloads\\New WebAsm\\New WebAsm\\WebAsm\\wwwroot\\uploads\\f4e9507a7c9042e28bbe7c33e75dcf85.jpg",
+      "PackagePath": "staticwebassets\\uploads\\f4e9507a7c9042e28bbe7c33e75dcf85.jpg"
+    },
+    {
+      "Id": "C:\\Users\\JianbinChan\\Downloads\\New WebAsm\\New WebAsm\\WebAsm\\wwwroot\\uploads\\photo.jpg",
+      "PackagePath": "staticwebassets\\uploads\\photo.jpg"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.WebAsm.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.WebAsm.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.WebAsm.props",
+      "PackagePath": "build\\WebAsm.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.WebAsm.props",
+      "PackagePath": "buildMultiTargeting\\WebAsm.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.WebAsm.props",
+      "PackagePath": "buildTransitive\\WebAsm.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

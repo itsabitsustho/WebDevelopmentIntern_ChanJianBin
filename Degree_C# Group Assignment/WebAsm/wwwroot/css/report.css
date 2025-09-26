@@ -1,0 +1,381 @@
+﻿
+.view-report-content-display .popup-image {
+    position: relative;
+}
+
+.view-report-content-display .popup {
+    background: #fff;
+    border: inherit;
+    padding: inherit;
+    position: absolute;
+    z-index: 1;
+    white-space: nowrap;
+    top: -39px;
+    left: 65%;
+    right: 50%;
+    transform: translate(5px, -50%);
+    display: none;
+}
+
+.view-report-content-display:hover .popup {
+    display: block;
+}
+
+/*Report Module Css*/
+/*View Report*/
+.view-report-content {
+    display: flex;
+    background-color: white;
+}
+
+.view-report-content-1 {
+    width: 20%;
+    padding: 15px;
+    border-right: 2px solid #ccc;
+    height: 500px;
+    overflow-y: auto;
+    display: block
+}
+
+.view-report-content-2 {
+    padding: 20px;
+    text-align: center;
+}
+
+.view-report-content-2 {
+    width: 80%;
+}
+
+.view-report-content-display-2 {
+    overflow-y: scroll;
+    display: grid;
+    grid: auto/1fr 1fr 1fr;
+    max-height: 480px;
+}
+
+    .view-report-content-display-2 .dateTitle {
+        grid-column: 1/4;
+        text-align: left;
+        height: fit-content;
+    }
+
+.view-report-content-display {
+    padding: 15px;
+    margin: 10px 15px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+    .view-report-content-display:hover {
+        border: 1px solid black;
+        transition: all 0.3s ease;
+        background-color: #ddd;
+    }
+
+    .view-report-content-display img {
+        width: 90px;
+        height: 90px;
+        object-fit: cover;
+        cursor: pointer;
+    }
+
+
+.view-detail-report-all-content {
+    max-width: 800px;
+    margin: 50px auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.view-detail-report-content-details {
+    display: grid;
+    grid: auto/ 20% 80%;
+    max-width: 760px;
+    text-align: left;
+}
+
+    .view-detail-report-content-details p {
+        padding: 0 20px;
+        text-align: justify;
+    }
+
+.view-detail-report-content h2 {
+    text-align: center;
+    padding: 18px 0;
+}
+
+.view-detail-report-content-details label {
+    margin: 0;
+    padding: 20px;
+}
+
+.view-detail-report-content-details .upload {
+    padding: 10px 0;
+}
+
+.view-detail-report-content-details span, .upload {
+    text-align: left;
+    text-align: justify;
+    grid-column: 2 / -1;
+}
+
+.view-detail-report-content-all-details .report-image {
+    text-align: center;
+}
+
+    .view-detail-report-content-all-details .report-image h3 {
+        text-align: center;
+        padding: 18px 0;
+    }
+
+.interaction-view-details-report-content h3 {
+    text-align: left;
+    padding: 18px 0 15px 0;
+}
+
+.report-details-admin-reply {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    margin-bottom: 15px;
+    display:flex;
+    justify-content: space-between
+}
+
+
+
+.report-details-rating-review textarea {
+    width: 97%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: none;
+}
+
+.report-details-rating-review input[type="number"] {
+    width: 60px;
+    padding: 5px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.report-details-rating-review button {
+    background-color: #0044cc;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+    .report-details-rating-review button:hover {
+        background-color: #0033aa;
+    }
+
+.report-details-rating-review p {
+    margin: 10px 0;
+}
+
+.report-details-other-reviews {
+    border-top: 1px solid #ddd;
+    margin-top: 20px;
+}
+
+    .report-details-other-reviews .review-item {
+        margin-bottom: 15px;
+        padding-bottom: 15px;
+        border-bottom: 1px solid #ddd;
+    }
+
+        .report-details-other-reviews .review-item p {
+            margin: 5px 0;
+        }
+
+.view-detail-report-content .back-link {
+    display: block;
+    text-align: left;
+    margin-bottom: 20px;
+    color: #0044cc;
+    text-decoration: none;
+}
+
+    .view-detail-report-content .back-link:hover {
+        text-decoration: underline;
+    }
+
+.styled-input, .styled-textarea, .styled-select, .styled-file-input {
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+
+.styled-textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+.styled-button {
+    background-color: #65558F;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+    .styled-button:hover {
+        background-color: #9b82db;
+    }
+
+.styled-file-input {
+    border: none;
+    padding: 5px;
+    font-size: 14px;
+}
+
+.styled-select {
+    appearance: none;
+}
+
+.styled-reset {
+    background-color: #898f97;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.report-button {
+    text-align: center;
+    display: flex;
+    width: 80%;
+    justify-content: space-evenly;
+    margin: 20px auto;
+}
+
+.view-report-action-section {
+    display: flex;
+    flex-flow: column;
+    grid: 1fr 1fr 1fr 1fr 1fr 1fr 1fr /auto;
+}
+
+    .view-report-action-section input, .view-report-action-section select, .view-report-action-section button {
+        margin-bottom: 10px;
+        appearance: none;
+        padding: 5px 10px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+        font-size: 14px;
+    }
+
+.view-report-content-display-nothing {
+    display: block;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+}
+
+.view-detail-report-content-all-details .report-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 16px;
+    text-align: left;
+}
+
+    .view-detail-report-content-all-details .report-table th,
+    .view-detail-report-content-all-details .report-table td {
+        padding: 10px;
+        border: 1px solid #ddd;
+    }
+
+    .view-detail-report-content-all-details .report-table th {
+        background-color: #e8dff7;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .view-detail-report-content-all-details .report-table tbody tr:hover {
+        background-color: #eee;
+        cursor: pointer;
+    }
+
+.view-detail-report-content-all-details .no-data {
+    text-align: center;
+    font-style: italic;
+}
+
+.view-detail-report-content-all-details .view-link {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #6f42c1;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+    .view-detail-report-content-all-details .view-link:hover {
+        background-color: #5a30a8;
+        transform: translateY(-2px);
+    }
+
+/* Shared base styles for edit and delete buttons */
+.view-detail-report-content-all-details .edit-link,
+.view-detail-report-content-all-details .delete-link {
+    display: inline-block;
+    padding: 8px 16px;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Edit button styles */
+.view-detail-report-content-all-details .edit-link {
+    background-color: #9b59b6; /* Light purple */
+}
+
+    .view-detail-report-content-all-details .edit-link:hover {
+        background-color: #8e44ad; /* Slightly darker purple */
+        transform: translateY(-2px);
+    }
+
+/* Delete button styles */
+.view-detail-report-content-all-details .delete-link {
+    background-color: #e74c3c; /* Bright red */
+}
+
+    .view-detail-report-content-all-details .delete-link:hover {
+        background-color: #c0392b; /* Darker red */
+        transform: translateY(-2px);
+    }

@@ -1,0 +1,55 @@
+﻿@model ReportEditStatusVM
+
+@{
+	ViewBag.Title = "Report Action";
+}
+
+@{
+	ViewBag.links = "Response";
+}
+
+<div class="admin-content">
+
+	<h1>
+		@ViewBag.Title
+	</h1>
+
+	<form method="post">
+		<div asp-validation-summary="ModelOnly"></div>
+
+
+
+		<input type="hidden" asp-for="Id" />
+
+		<div class="view-detail-report-content-all-details-2">
+			<div class="view-detail-report-content-details">
+				<label asp-for="Status"><b>Report Status: *</b></label>
+				<select asp-for="Status" class="styled-select">
+					<option value="">Select a Status</option>
+
+					@foreach (var r in ViewBag.statuses)
+					{
+						<option value="@r">@r</option>
+					}
+				</select>
+				<span asp-validation-for="Status"></span>
+
+				<label asp-for="Priority"><b>Priority: *</b></label>
+				<select asp-for="Priority" class="styled-select">
+					<option value="">Select a Priority</option>
+					<option value="Low">Low</option>
+					<option value="Medium">Medium</option>
+					<option value="High">High</option>
+				</select>
+
+
+			</div>
+			<div class="report-button">
+				<button class="styled-reset" type="reset">Reset</button>
+				<button class="styled-button" type="submit">Submit</button>
+			</div>
+		</div>
+
+	</form>
+
+</div>

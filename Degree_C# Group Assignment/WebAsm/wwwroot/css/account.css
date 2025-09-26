@@ -1,0 +1,274 @@
+﻿/*Account CSS*/
+.login {
+    background-image: url(/images/loginBg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+/*    overflow: hidden;*/
+}
+
+    .login::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: inherit;
+        background-size: inherit;
+        background-position: inherit;
+        filter: blur(8px);
+        z-index: -1;
+    }
+
+.loginForm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px;
+    overflow-y: auto;
+}
+
+.login-form {
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.login form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-lable {
+    margin-bottom: 5px;
+    margin-top: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #333;
+}
+
+input[type="text"], input[type="email"], input[type="password"], input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #333;
+    box-sizing: border-box;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.update-form .upload {
+    display: flex;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 15px;
+    align-items: center;
+}
+
+    .upload small {
+        font-size: 12px;
+        color: #fff;
+    }
+
+
+    .upload img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 5px;
+    }
+
+.login input[type="checkbox"] {
+    width: auto;
+    margin-right: 5px;
+}
+
+.login button {
+    padding: 10px;
+    width: 100%;
+    margin: 10px 0;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+    .login button:hover {
+        background-color: #0056b3;
+    }
+
+    .login button[type="reset"] {
+        background-color: #6c757d;
+    }
+
+        .login button[type="reset"]:hover {
+            background-color: #5a6268;
+        }
+
+.login-form span {
+    color: red;
+    font-size: 12px;
+    margin-top: -10px;
+    margin-bottom: 10px;
+}
+
+.form-container {
+    background-image: url(/images/loginBg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.form-container1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.update-password-button {
+    background-color: #dc3545;
+}
+
+.update-form {
+    width: 100%;
+    max-width: 400px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+    .update-form label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 5px;
+        color: #333;
+    }
+
+    .update-form input[type="text"],
+    .update-form input[type="password"],
+    .update-form input[type="email"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 14px;
+    }
+
+    .update-form input:focus {
+        border-color: #007bff;
+        outline: none;
+        box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    }
+
+    .update-form button {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        padding: 10px 15px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 14px;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+        .update-form button[type="reset"] {
+            background-color: #6c757d;
+        }
+
+        .update-form button:hover {
+            opacity: 0.9;
+        }
+
+    .update-form .upload {
+        position: relative;
+        cursor: pointer;
+        margin-bottom: 15px;
+    }
+
+        .update-form .upload img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            margin-top: 10px;
+            border-radius: 4px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+    .update-form a {
+        display: block;
+        margin-top: 10px;
+        text-align: center;
+        color: #007bff;
+        text-decoration: none;
+        font-size: 14px;
+    }
+
+        .update-form a:hover {
+            text-decoration: underline;
+        }
+
+
+.contact-us-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-section {
+    margin-bottom: 30px;
+}
+
+    .contact-section h2 {
+        font-size: 1.5em;
+        color: #333;
+        margin-bottom: 10px;
+    }
+
+.contact-details p {
+    font-size: 1em;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 8px;
+}
+
+    .contact-details p strong {
+        color: #005f87;
+    }

@@ -1,0 +1,47 @@
+﻿<h1>Reponse</h1>
+<div class="response-table">
+
+
+	<div class="add-response-button">
+		<button data-get="/Admin/AddResponse/@Model.Id" class="add-response">Add Response</button>
+	</div>
+
+
+	<table>
+		<thead>
+			<tr>
+				<th>ID</th>
+				<th>Text</th>
+				<th>Reponse Date</th>
+				<th>Action</th>
+
+			</tr>
+		</thead>
+		<tbody>
+
+			@foreach (var rs in ViewBag.response)
+			{
+				<tr>
+
+					<td>
+						@rs.Id
+
+					</td>
+					<td>
+						@rs.Text
+					</td>
+					<td>
+						@rs.ReplyDate.ToString("yyyy-MM-dd")
+					</td>
+					<td>
+						<center>
+							<a href="/Admin/EditResponse/@rs.Id&@Model.Id" class="edit-link">Edit</a>
+							<button data-post="/Admin/DeleteResponse/@rs.Id@Model.Id" class="delete-link" data-confirm>Delete</button>
+						</center>
+					</td>
+				</tr>
+			}
+
+		</tbody>
+	</table>
+</div>

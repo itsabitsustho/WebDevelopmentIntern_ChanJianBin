@@ -1,0 +1,115 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+.ratingHead {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #444;
+}
+
+.form {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 25px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 5px;
+    display: block;
+}
+
+textarea, input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s;
+    resize:none;
+}
+
+textarea:focus, input[type="number"]:focus {
+    border-color: #32CD32;
+    outline: none;
+    background-color: #fff;
+}
+
+
+.upload img {
+    display: block;
+    width: 120px;
+    height: 120px;
+    border-radius: 8px;
+    object-fit: cover;
+    border: 2px dashed #ccc;
+    cursor: pointer;
+    
+}
+
+.upload img:hover {
+    border-color: #32CD32;
+}
+
+.update-upload {
+    display:flex;
+    gap:5px;
+    padding:10px;
+}
+
+.button-comment {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+button {
+    background: #32CD32;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background: #28a745;
+    transform: scale(1.05);
+}
+
+button:active {
+    background: #218838;
+}
+
+button.cancel {
+    background: #dc3545;
+}
+
+button.cancel:hover {
+    background: #c82333;
+}
+
+span {
+    color: #d9534f;
+    font-size: 12px;
+}

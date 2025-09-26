@@ -1,0 +1,182 @@
+﻿@using X.PagedList
+@using X.PagedList.Mvc.Core
+@model IPagedList<Report>
+
+@{
+	ViewBag.Title = "Past Reports";
+}
+
+<div class="view-report-content">
+	<div class="view-report-content-1">
+		<h3>Filter Reports</h3>
+		<form class="view-report-action-section">
+			<label for="report-search">Search Report Title:</label>
+			@Html.TextBox("reportTitle", "", new { type = "search", autofocus = "", data_trim = "" })
+
+			<label for="select-area">Select Area:</label>
+			@Html.DropDownList("AreaId", new SelectList(ViewBag.area, "Id", "Name"), "Select an Area", new { @id = "select-area" })
+
+			<label for="select-facility">Select Facility:</label>
+			@Html.DropDownList("FacilityId", new SelectList(ViewBag.facility, "Id", "Name"), "Select a Facility", new { @id = "select-facility" })
+
+			<label for="select-status">Select Status:</label>
+			@Html.DropDownList("Status", new SelectList(ViewBag.Statuses), "Select Status", new { @id = "select-status" })
+
+			<label for="report-date">Select Date:</label>
+			@Html.TextBox("PostedDate", "", new { type = "date", @id = "report-date" })
+
+
+			<button class="styled-button">Search</button>
+			<button class="styled-reset" type="reset">Reset</button>
+		</form>
+
+	</div>
+
+
+	<div class="view-report-content-2">
+
+		<h2>@ViewBag.Title</h2>
+
+		<div class="view-detail-report-content-all-details">
+			<table class="report-table">
+				<thead>
+					<tr>
+						<th>Report Title</th>
+						<th>Date</th>
+						<th>Facility</th>
+						<th>Area</th>
+						<th>Status</th>
+						<th>Actions</th>
+					</tr>
+				</thead>
+				<tbody>
+					@if (Model.Any())
+					{
+						foreach (var report in Model)
+						{
+							<tr>
+								<td>@report.Title</td>
+								<td>@report.PostedDate.ToString("yyyy-MM-dd")</td>
+								<td>@(report.Facility?.Name ?? "N/A")</td>
+								<td>@(report.Facility?.Area?.Name ?? "N/A")</td>
+								<td>@report.Status</td>
+								<td>
+									<center
+										><a href="/Report/ViewDetailReport/@report.Id" class="view-link">View</a>
+										<a href="/Report/EditReport/@report.Id" class="edit-link">Edit</a>
+										<button data-post="/Report/DeleteReport/@report.Id" class="delete-link">Delete</button>
+										</center>
+								</td>
+							</tr>
+						}
+					}
+					else
+					{
+						<tr>
+							<td colspan="6" class="no-data">No reports found.</td>
+						</tr>
+					}
+				</tbody>
+			</table>
+			<div>
+				<center>
+					@{
+						var options = PagedListRenderOptions.ClassicPlusFirstAndLast;
+						options.LinkToFirstPageFormat = "First";
+						options.LinkToLastPageFormat = "Last";
+						options.LinkToPreviousPageFormat = "Previous";
+						options.LinkToNextPageFormat = "Next";
+
+					}
+				</center>
+
+			</div>
+
+			@Html.PagedListPager(
+							Model,
+							page => $"?page={page}",
+							options
+							)
+
+		</div>
+
+
+	</div>
+
+</div>
+
+
+@* <div class="view-detail-report-all-content"> *@
+@* 	<div class="view-detail-report-content"> *@
+@* 		<a href="/Report/ViewReport" class="back-link">&larr; Back to Report List</a> *@
+@* 		<h2> *@
+@* 			@ViewBag.Title *@
+@* 		</h2> *@
+
+@* 		<form class="view-report-action-section" method="get" action="/Report/PersonalReportList"> *@
+@* 			<div class="filter-container"> *@
+
+@* 				<label for="report-search">Search Report Title:</label> *@
+@* 				@Html.TextBox("reportTitle", "", new { type = "search", autofocus = "", data_trim = "" }) *@
+
+@* 				<label for="select-area">Select Area:</label> *@
+@* 				@Html.DropDownList("AreaId", new SelectList(ViewBag.area, "Id", "Name"), "Select an Area", new { @id = "select-area" }) *@
+
+@* 				<label for="select-facility">Select Facility:</label> *@
+@* 				@Html.DropDownList("FacilityId", new SelectList(ViewBag.facility, "Id", "Name"), "Select a Facility", new { @id = "select-facility" }) *@
+
+@* 				<label for="select-status">Select Status:</label> *@
+@* 				@Html.DropDownList("Status", new SelectList(ViewBag.Statuses), "Select Status", new { @id = "select-status" }) *@
+
+@* 				<label for="report-date">Select Date:</label> *@
+@* 				@Html.TextBox("PostedDate", "", new { type = "date", @id = "report-date" }) *@
+
+@* 				<button class="styled-button" type="submit">Search</button> *@
+@* 			</div> *@
+@* 		</form> *@
+
+
+@* 		<div class="view-detail-report-content-all-details"> *@
+@* 			<table class="report-table"> *@
+@* 				<thead> *@
+@* 					<tr> *@
+@* 						<th>Report Title</th> *@
+@* 						<th>Date</th> *@
+@* 						<th>Facility</th> *@
+@* 						<th>Area</th> *@
+@* 						<th>Status</th> *@
+@* 						<th>Actions</th> *@
+@* 					</tr> *@
+@* 				</thead> *@
+@* 				<tbody> *@
+@* 					@if (Model.Any()) *@
+@* 					{ *@
+@* 						foreach (var report in Model) *@
+@* 						{ *@
+@* 							<tr> *@
+@* 								<td>@report.Title</td> *@
+@* 								<td>@report.PostedDate.ToString("yyyy-MM-dd")</td> *@
+@* 								<td>@(report.Facility?.Name ?? "N/A")</td> *@
+@* 								<td>@(report.Facility?.Areas?.Name ?? "N/A")</td> *@
+@* 								<td>@report.Status</td> *@
+@* 								<td> *@
+@* 									<center><a href="/Report/ViewDetailReport/@report.Id" class="view-link">View</a></center> *@
+@* 								</td> *@
+@* 							</tr> *@
+@* 						} *@
+@* 					} *@
+@* 					else *@
+@* 					{ *@
+@* 						<tr> *@
+@* 							<td colspan="6" class="no-data">No reports found.</td> *@
+@* 						</tr> *@
+@* 					} *@
+@* 				</tbody> *@
+@* 			</table> *@
+
+
+@* 		</div> *@
+@* 	</div> *@
+
+
+@* </div> *@

@@ -1,0 +1,49 @@
+﻿@model IEnumerable<Vendor>
+
+@{
+    string[] fields = ["Id", "Owner Name", "Email", "Contact", "Company Name", "Company Type"];
+}
+
+<table class="table">
+    <thead>
+
+        <tr class="tableHead">
+            @foreach (var f in fields)
+            {
+                string d = "asc";
+                string c = "";
+
+                if (f == ViewBag.Sort)
+                {
+                    d = ViewBag.Dir == "des" ? "asc" : "des";
+                    c = ViewBag.Dir;
+                }
+                <th>
+                    <a data-ajax="true" data-ajax-update="#target" data-ajax-loading="#loader" href="?sort=@f&dir=@d" class="@c">@f</a>
+
+                </th>
+
+            }
+            <th></th>
+            <th></th>
+        </tr>
+    </thead>
+
+    <tbody>
+
+        @foreach (var v in Model)
+        {
+            <tr>
+                <td>@v.Id</td>
+                <td>@v.OwnerName</td>
+                <td>@v.Email</td>
+                <td>@v.Contact</td>
+                <td>@v.CompanyName</td>
+                <td>@v.CompanyType</td>
+                <td><button class="btnUpdate" data-get="/Vendor/Update/@v.Id">Update</button></td>
+                <td><button class="btnDelete" data-post="/Vendor/Delete/@v.Id">Delete</button></td>
+
+            </tr>
+        }
+    </tbody>
+</table>

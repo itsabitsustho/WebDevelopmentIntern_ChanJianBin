@@ -1,0 +1,93 @@
+﻿@{
+	ViewBag.Title = "All Report";
+}
+
+<div class="view-report-content">
+	<div class="view-report-content-1">
+		<h3>Filter Reports</h3>
+		<form class="view-report-action-section">
+			<label for="report-search">Search Report Title:</label>
+			@Html.TextBox("reportTitle", "", new
+				{
+					type = "search",
+					autofocus = "",
+					data_trim = ""
+				})
+
+			<label for="select-area">Select Area:</label>
+			@Html.DropDownList(
+							"AreaId",
+							new SelectList(ViewBag.area, "Id", "Name"),
+							"Select an Area",
+							new { @id = "select-area" }
+							)
+
+
+			<label for="select-facility">Select Facility:</label>
+			@Html.DropDownList(
+							"FacilityId",
+							new SelectList(ViewBag.facility, "Id", "Name"),
+							"Select a Facility",
+							new { @id = "select-facility" })
+
+			<label for="select-status">Select Status:</label>
+			@Html.DropDownList("Status", new SelectList(ViewBag.Statuses), "Select Status", new { @id = "select-status" })
+
+			<label for="report-date">Select Date:</label>
+			@Html.TextBox("PostedDate", "", new { type = "date", @id = "report-date" })
+
+			<button class="styled-button">Search</button>
+			<button class="styled-reset" type="reset">Reset</button>
+
+		</form>
+
+	</div>
+
+
+	<div class="view-report-content-2">
+
+		<h2>All Reports</h2>
+
+		@{
+			var groupedReports = (IEnumerable<dynamic>)Model;
+
+			var countData = groupedReports.Sum(group => (int)group.Count);
+		}
+
+		@if (countData == 0)
+		{
+			<div class="view-report-content-display-nothing">
+				No Report Found.
+			</div>
+		}
+		else
+		{
+
+
+			<div class="view-report-content-display-2">
+				@foreach (var group in Model)
+				{
+					<h3 class="dateTitle">@group.Date.ToString("yyyy-MM-dd") </h3>
+
+					@foreach (var report in group.Reports)
+					{
+
+						<a href="/Report/ViewDetailReport/@report.Id" class="view-report-content-display">
+							<b>Report Title:</b> @report.Title<br />
+							<b>Area: </b>@report.Facility.Area.Name<br />
+							<b>Facility: </b>@report.Facility.Name<br />
+							<b>Status: </b>@report.Status<br />
+							<div class="popup-image">
+								<img class="popup" src="/reportImage/@report.Photo" alt="@report.Title" width="200" />
+							</div>
+						</a>
+					}
+
+				}
+			</div>
+		}
+	</div>
+</div>
+
+
+

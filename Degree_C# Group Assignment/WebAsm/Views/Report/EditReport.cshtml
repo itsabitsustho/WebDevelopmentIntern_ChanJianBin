@@ -1,0 +1,87 @@
+﻿@model ReportEditVM
+
+@{
+	ViewBag.Title = "Edit Report";
+}
+
+<div class="view-detail-report-all-content">
+	<div class="view-detail-report-content">
+		<a href="/Report/PersonalReportList" class="back-link">&larr; Back to Personal Report List</a>
+		<h2>
+			@ViewBag.Title
+		</h2>
+		<form asp-action="EditReport" method="post" enctype="multipart/form-data">
+			<div asp-validation-summary="ModelOnly"></div>
+
+			<input type="hidden" asp-for="Id" /> <!-- Hidden ID field -->
+
+			<div class="view-detail-report-content-all-details">
+				<div class="view-detail-report-content-details">
+					<label asp-for="Title"><b>Report Title: *</b></label>
+					<input asp-for="Title" class="styled-input" />
+					<span asp-validation-for="Title"></span>
+
+					<label asp-for="AreaId"><b>Area: *</b></label>
+					<select asp-for="AreaId" id="select-area" class="styled-select">
+						<option value="" selected>- Select an Area -</option>
+						@foreach (var r in ViewBag.area)
+						{
+							<option value="@r.Id" selected="@(Model.AreaId == r.Id ? "selected" : null)">@r.Name</option>
+						}
+					</select>
+					<span asp-validation-for="AreaId"></span>
+
+					<label asp-for="FacilityId"><b>Facility: *</b></label>
+					<select asp-for="FacilityId" id="select-facility" class="styled-select">
+						<option value="" selected>Select an Facility</option>
+						@foreach (var r in ViewBag.facility)
+						{
+							<option value="@r.Id" data-area="@r.Area.Id" selected="@(Model.FacilityId == r.Id ? "selected" : null)">@r.Name</option>
+						}
+					</select>
+					<span asp-validation-for="FacilityId"></span>
+					<label asp-for="Detail"><b>Details: *</b></label>
+					<textarea asp-for="Detail" class="styled-textarea"></textarea>
+					<span asp-validation-for="Detail"></span>
+
+					<label asp-for="Photo"><b>Photo: *</b></label>
+					<label class="upload">
+					<label class="upload">
+						<input asp-for="Photo" accept="image/jpeg,image/png" hidden>
+							<img src="/reportImage/@Model.PhotoURL">
+					</label>
+					<span asp-validation-for="Photo"></span>
+				</div>
+			</div>
+			<div class="report-button">
+				<button class="styled-reset" type="reset">Reset</button>
+				<button class="styled-button" type="submit">Submit</button>
+			</div>
+		</form>
+	</div>
+</div>
+
+<script>
+	 const areaDropdown = document.getElementById('select-area');
+	 const facilityDropdown = document.getElementById('select-facility');
+
+	 areaDropdown.addEventListener('change', () => {
+		 const selectedArea = areaDropdown.value;
+
+	if (selectedArea != null) {
+		 facilityDropdown.disabled = false;
+	 } else {
+		 facilityDropdown.disabled = true;
+	 }
+
+		 Array.from(facilityDropdown.options).forEach(option => {
+			 if (option.dataset.area === selectedArea || option.value === "") {
+				 option.style.display = "";
+			 } else {
+				 option.style.display = "none";
+			 }
+		 });
+
+		 facilityDropdown.value = "";
+	 });
+</script>

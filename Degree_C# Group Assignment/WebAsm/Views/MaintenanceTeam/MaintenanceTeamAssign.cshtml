@@ -1,0 +1,51 @@
+﻿@model MaintenanceTeamUpdateVM
+
+@{
+	ViewBag.Title = "Assign | Report";
+}
+
+<div class="allBackMemView">
+	<div class="allInsertDetails">
+		<form method="post" class="form">
+			<div asp-validation-summary="ModelOnly"></div>
+
+			<label asp-for="Id"></label>
+			<b>@Model.Id</b>
+			<br />
+
+			<label asp-for="Name"></label>
+			<input asp-for="Name" readonly>
+
+			<br />
+
+			<label asp-for="Email"></label>
+			<input asp-for="Email" readonly>
+			<br />
+
+			<label asp-for="Contact"></label>
+			<input asp-for="Contact" readonly>
+			<br />
+
+			<label asp-for="CompanyName"></label>
+			<input asp-for="CompanyName" readonly>
+			<br />
+
+			<label asp-for="CompanyType"></label>
+			<input asp-for="CompanyType" readonly>
+			<br />
+
+			<label asp-for="ReportId">Assign Report</label>
+			<select asp-for="ReportId" asp-items="ViewBag.ReportList">
+				<option value="">- Select One -</option>
+			</select>
+			<span asp-validation-for="ReportId"></span>
+
+			<section>
+				<button data-get="/">Index</button>
+				<button>Submit</button>
+				<button type="reset">Reset</button>
+			</section>
+		</form>
+	</div>
+</div>
+

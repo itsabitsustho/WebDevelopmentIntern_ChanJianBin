@@ -1,0 +1,598 @@
+﻿/*Admin CSS*/
+.admin-body {
+    background-color: rgb(40, 40, 40);
+    color: white;
+}
+/* Main Content Styles */
+.admin-content {
+    margin-left: 100px;
+    padding: 20px;
+    flex-grow: 1;
+    transition: margin-left 0.3s ease;
+}
+
+.admin-sidebar {
+    width: 80px;
+    height: 100vh;
+    background-color: rgb(30, 30, 30);
+    transition: all 0.5s ease;
+    position: fixed;
+    overflow: hidden;
+    color: rgb(136, 136, 136);
+    display: grid;
+    align-items: center;
+    border-radius: 0 10px 10px 0;
+    box-shadow: 0px 0px 3px white;
+    border-left: 0px;
+}
+
+.nav-links {
+    display: grid;
+    grid: auto / auto;
+    align-items: center;
+    height: 100vh;
+    align-content: space-evenly;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    flex-grow: 1;
+    height: 100%;
+    width: 300px;
+}
+
+.admin-sidebar:hover {
+    width: 100px;
+    padding-right: 250px;
+}
+
+.nav-links li {
+    margin: 0;
+}
+
+.nav-links a {
+    display: flex;
+    align-items: center;
+    padding: 10px 30px;
+    transition: color 0.3s ease;
+    width: 100%;
+    color: #888888;
+    text-decoration: none;
+    gap: 30px
+}
+
+    .nav-links a:hover {
+        color: white;
+        border-left: 3px solid white;
+        border-bottom: none;
+        border-top: none;
+        text-decoration: none;
+    }
+
+.selected-nav-links {
+    color: black;
+    border-left: 3px solid white;
+    border-bottom: none;
+    border-top: none;
+    text-decoration: none;
+    background-color: white;
+}
+
+    .selected-nav-links:hover {
+        color: black;
+    }
+
+.admin-content h1 {
+    background-color: transparent;
+}
+
+.nav-links li .logout:hover {
+    color: rgb(237, 67, 96);
+    color: red;
+    border-left: 3px solid red;
+}
+
+.field-validation-error,
+.validation-summary-errors {
+    color: red;
+}
+
+.icon-black-white {
+    filter: grayscale(100%);
+}
+
+
+/* Admin Content */
+.admin-content {
+    padding: 20px;
+    /*    background-color: #f9f9f9;*/
+    border-radius: 8px;
+    /*    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);*/
+}
+
+/* Header */
+.admin-header {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* Header */
+.admin-header {
+    font-size: 24px;
+    color: #fff; /* White text */
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* Actions */
+.admin-actions {
+    margin-bottom: 20px;
+}
+
+/* Background and layout for the container */
+.add-response-button {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Dark theme button styling */
+.add-response {
+    background-color: rgb(30, 30, 30);
+    color: white; /* White text */
+    border: none; /* Remove borders */
+    padding: 12px 24px; /* Padding for the button */
+    font-size: 16px; /* Text size */
+    font-weight: bold; /* Bold text */
+    border-radius: 8px; /* Rounded corners */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+    cursor: pointer; /* Pointer cursor */
+}
+
+    /* Hover effect for the button */
+    .add-response:hover {
+        background-color: #555; /* Lighter grey for hover effect */
+        transform: translateY(-2px); /* Slight lift on hover */
+    }
+
+    /* Focus state for accessibility */
+    .add-response:focus {
+        outline: 2px solid #fff; /* White outline on focus */
+        outline-offset: 2px; /* Slightly offset the outline */
+    }
+
+/* Optional: for the button container */
+.add-response-button {
+    padding: 15px;
+    border-radius: 10px;
+    width: fit-content;
+    text-align: left
+}
+
+
+/* Table */
+.response-table table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #2a2a2a; /* Slightly lighter dark grey for table */
+    border-radius: 8px;
+    overflow: hidden;
+    color: #fff; /* White text */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.response-table th,
+.response-table td {
+    padding: 12px 16px;
+    text-align: center;
+    border-bottom: 1px solid #3a3a3a; /* Subtle grey border */
+}
+
+.response-table th {
+    background-color: #333; /* Dark grey header */
+    color: #fff; /* White text */
+    font-weight: bold;
+}
+
+.response-table tr:hover {
+    background-color: #444; /* Lighter dark grey on hover */
+}
+
+.response-table td {
+    font-size: 14px;
+    color: #ddd; /* Light grey text for cells */
+}
+
+/* Action Links */
+.response-table .view-link,
+.response-table .edit-link,
+.response-table .delete-link {
+    margin-right: 8px;
+    text-decoration: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #fff; /* White text */
+}
+
+/* View Link */
+.response-table .view-link {
+    background-color: #4b4b4b; /* Medium grey */
+}
+
+    .response-table .view-link:hover {
+        background-color: #6c6c6c; /* Lighter grey */
+    }
+
+/* Edit Link */
+.response-table .edit-link {
+    background-color: #ffc107; /* Gold */
+    color: #333; /* Black text */
+}
+
+    .response-table .edit-link:hover {
+        background-color: #e0a800; /* Darker gold */
+    }
+
+/* Delete Link */
+.response-table .delete-link {
+    background-color: #dc3545; /* Red */
+}
+
+    .response-table .delete-link:hover {
+        background-color: #c82333; /* Darker red */
+    }
+
+.pagination a,
+.pagination span {
+    background: #f4f4f4 !important; /* Light gray background */
+    color: #333333 !important; /* Dark gray text */
+    border: 1px solid #cccccc !important; /* Soft gray border */
+}
+
+    .pagination a:hover,
+    .pagination span:hover {
+        background: #e0e0e0 !important; /* Slightly darker gray for hover */
+        color: #000000 !important; /* Black text for better contrast */
+    }
+
+.pagination .active a,
+.pagination .active span {
+    background: #333333 !important; /* Dark gray for active state */
+    color: #ffffff !important; /* White text for contrast */
+}
+
+.pagination .disabled a,
+.pagination .disabled span {
+    background: #f9f9f9 !important; /* Very light gray for disabled state */
+    color: #aaaaaa !important; /* Light gray text for disabled */
+    border: 1px solid #dddddd !important; /* Lighter gray border */
+}
+
+.pagination-container {
+    text-align: center;
+}
+
+.view-detail-report-content-all-details {
+    display: grid;
+    grid: auto/ 1fr 1fr;
+    margin: 0 auto;
+    width: 80%;
+    background-color: rgb(51, 51, 51);
+    padding: 30px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    border-radius: 8px;
+}
+
+.view-detail-report-content-all-details-2 {
+    margin: 0 auto;
+    width: 80%;
+    background-color: rgb(51, 51, 51);
+    padding: 30px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    border-radius: 8px;
+}
+
+.view-detail-report-content-details {
+    display: grid;
+    grid: auto/ 20% 80%;
+    text-align: left;
+    align-items: center;
+}
+
+.view-detail-report-content-all-details .report-image h3 {
+    margin-bottom: 20px;
+}
+
+.reponse-section {
+    grid-column: 1 / -1;
+}
+
+/* Style for the response section */
+.reponse-section {
+    margin-top: 20px;
+    text-align: center; /* Centers the button */
+}
+
+/* General Dark Mode Styles */
+body {
+    background-color: #121212; /* Dark background */
+    color: #e0e0e0; /* Light text color for readability */
+}
+
+.reponse-section {
+    margin-top: 20px;
+    text-align: center; /* Centers the button */
+}
+
+/* Dark Mode Button Styling */
+.view-all-response-btn {
+    padding: 12px 24px;
+    background-color: #333; /* Dark button background */
+    color: #ffffff; /* Light text color */
+    border: none;
+    border-radius: 8px; /* Rounded corners */
+    font-size: 16px; /* Larger font size for readability */
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-align: center;
+    display: inline-block;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Darker shadow for dark mode */
+}
+
+    /* Hover Effect */
+    .view-all-response-btn:hover {
+        background-color: #555; /* Lighter shade of grey on hover */
+        transform: translateY(-3px); /* Slight upward movement */
+    }
+
+    /* Focus Effect for accessibility */
+    .view-all-response-btn:focus {
+        outline: none;
+        box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Blue glow effect for focus */
+    }
+
+    /* Disabled Button Styling */
+    .view-all-response-btn:disabled {
+        background-color: #444; /* Darker grey for disabled state */
+        cursor: not-allowed;
+    }
+
+/* Optional: Styling for links and text inside the page */
+a {
+    color: #1e90ff; /* Bright blue color for links in dark mode */
+    text-decoration: none;
+}
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+.styled-input, .styled-textarea, .styled-select, .styled-file-input {
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+.styled-textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+.styled-button {
+    background-color: #65558F;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+    .styled-button:hover {
+        background-color: #9b82db;
+    }
+
+
+.styled-reset {
+    background-color: #898f97;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.report-button {
+    text-align: center;
+    display: flex;
+    width: 80%;
+    justify-content: space-evenly;
+    margin: 20px auto;
+}
+
+.view-detail-report-content-details .action-btn {
+    grid-column: 1 / -1;
+    text-align: center;
+}
+
+    /* Styling for the button */
+    .view-detail-report-content-details .action-btn button {
+        background-color: #444;
+        color: #fff;
+        font-size: 14px;
+        font-weight: bold;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+        /* Hover effect for the button */
+        .view-detail-report-content-details .action-btn button:hover {
+            background-color: #666;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .view-detail-report-content-details .action-btn button:active {
+            background-color: #333; /* Darker background when clicked */
+            transform: translateY(0); /* Reset lift effect */
+            box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+        }
+
+/* Optional container styling */
+.view-detail-report-content-details .action-btn {
+    text-align: center; /* Center the button */
+    margin-top: 20px; /* Add spacing at the top */
+}
+
+.view-detail-report-content-details span, .upload {
+    text-align: left;
+    text-align: justify;
+    grid-column: 2 / -1;
+}
+
+
+/*
+    Jian Bin Part
+*/
+
+.all-member-table table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.all-member-table th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    font-size: 1.1em;
+}
+
+.all-member-table th {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.all-member-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.btn {
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 1em;
+    margin-right: 10px;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+}
+
+    .btn-primary:hover {
+        background-color: #0056b3;
+    }
+
+.btn-danger {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+}
+
+    .btn-danger:hover {
+        background-color: #c82333;
+    }
+
+/*    DashBoard*/
+.admin-content .container {
+    width: 100%;
+    display: grid;
+    grid: auto/ auto auto auto;
+    gap: 30px;
+    z-index: -999;
+}
+
+    .admin-content .container .card p {
+        font-size: 38px;
+        font-weight: bold;
+        margin: 0;
+    }
+
+    .admin-content .container .card {
+        position: relative;
+        display: block;
+        background: #1e1e1e;
+        padding: 20px;
+        margin-bottom: 10px;
+        overflow: hidden;
+        width: 400px;
+        border-radius: 15px;
+        z-index: -999;
+        margin: 0 auto;
+    }
+
+
+.chart-container {
+    display: grid;
+    grid: auto/ auto auto;
+    width: 70%;
+    color: white;
+    justify-items: center;
+    gap: 30px;
+    margin: 0 auto;
+}
+
+.chart-content {
+    background-color: #1e1e1e;
+    border: 1px solid #d1d1d1;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0px 0px 5px white;
+    width: 300px;
+    height: 300px;
+    /*display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: -1;*/
+}
+
+    .chart-content p {
+        text-align: center;
+        margin: 0;
+        font-weight: bold;
+    }
+
+.admin-content .addMaintainBtn {
+    background-color: #444;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+    .admin-content .addMaintainBtn:hover {
+        background-color: #666;
+        transform: translateY(-2px);
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    }
